@@ -3,211 +3,365 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THE PLANET OCTOPUS — Broadcasting since the collapse</title>
-<meta name="description" content="Intercepted dispatches from an Earth that is mostly water again. A satirical bulletin filed by nine departments of a government that no longer governs anything.">
-<meta name="theme-color" content="#ECE3CE">
+<title>THE OCTOPUS PLANET — Broadcasting since the collapse</title>
+<meta name="description" content="A satirical comic bulletin from an Earth that is mostly water again, filed by nine departments of a government that no longer governs anything.">
+<meta name="theme-color" content="#F7EED6">
 <link rel="canonical" href="https://www.theoctopusplanet.com/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="The Planet Octopus">
-<meta property="og:title" content="The Planet Octopus — Broadcasting since the collapse">
-<meta property="og:description" content="Intercepted dispatches from an Earth that is mostly water again. Filed by nine departments of a government that no longer governs anything.">
+<meta property="og:site_name" content="The Octopus Planet">
+<meta property="og:title" content="The Octopus Planet — Broadcasting since the collapse">
+<meta property="og:description" content="A satirical comic bulletin from an Earth that is mostly water again. Filed by nine departments of a government that no longer governs anything.">
 <meta property="og:url" content="https://www.theoctopusplanet.com/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Planet Octopus — Broadcasting since the collapse">
-<meta name="twitter:description" content="Intercepted dispatches from an Earth that is mostly water again.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23ECE3CE'/%3E%3Cpath fill='%2317120D' d='M50 16c-14 0-24 10-24 25 0 6 2 11 5 14-2 1-4 3-5 6-2 5-7 7-11 6-2 0-3 2-1 3 4 3 10 3 14 0 1 3 3 4 6 5-3 2-5 5-5 10 0 2 2 2 3 0 2-3 4-5 8-6 2 1 4 1 5 1 2 0 4 0 6-1 3 1 6 3 8 6 1 2 3 2 3 0 0-5-2-8-5-10 3-1 5-2 6-5 4 3 10 3 14 0 2-1 1-3-1-3-4 1-9-1-11-6-1-3-3-5-5-6 3-3 5-8 5-14 0-15-10-25-24-25z'/%3E%3Ccircle cx='41' cy='40' r='4' fill='%23ECE3CE'/%3E%3Ccircle cx='59' cy='40' r='4' fill='%23ECE3CE'/%3E%3C/svg%3E">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<meta name="twitter:title" content="The Octopus Planet — Broadcasting since the collapse">
+<meta name="twitter:description" content="A satirical comic bulletin from an Earth that is mostly water again.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23FFD23F'/%3E%3Cpath fill='%23141414' d='M50 18c-15 0-25 11-25 26 0 6 2 11 5 15-3 2-6 6-8 11-2 4-7 5-10 4-2 0-2 3 0 4 5 2 11 1 15-3 1 4 4 7 8 9-3 3-5 7-5 12 0 3 3 3 4 0 2-4 5-7 9-8 2 1 4 1 7 1s5 0 7-1c4 1 7 4 9 8 1 3 4 3 4 0 0-5-2-9-5-12 4-2 7-5 8-9 4 4 10 5 15 3 2-1 2-4 0-4-3 1-8 0-10-4-2-5-5-9-8-11 3-4 5-9 5-15 0-15-10-26-25-26z'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:ital,wght@0,400;0,700;1,400&family=Patrick+Hand&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#ECE3CE; --paper-2:#E3D8BC;
-    --ink:#17120D; --blue:#1E2A8C; --red:#EF3B17; --ink-soft:#534b3c;
+    --paper:#F7EED6; --ink:#161310;
+    --blue:#2C5FCF; --red:#E63A29; --yellow:#FFD23F;
+    --teal:#1FA89B; --purple:#8E6FE0; --green:#5CB84E; --pink:#F58CB5;
+    --shadow:6px 6px 0 var(--ink);
+    --disp:'Bangers', system-ui, cursive;
+    --hand:'Patrick Hand', 'Comic Neue', cursive;
+    --body:'Comic Neue', system-ui, sans-serif;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
-    margin:0;background:var(--paper);color:var(--ink);
-    font-family:'Courier Prime', ui-monospace, monospace;font-size:16px;line-height:1.55;
+    margin:0;color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.5;
+    background-color:var(--paper);
+    background-image:radial-gradient(var(--ink) 1px, transparent 1.4px);
+    background-size:22px 22px;background-attachment:fixed;
     -webkit-font-smoothing:antialiased;overflow-x:hidden;
   }
-  body::before{
-    content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;mix-blend-mode:multiply;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
-  }
+  body::before{content:"";position:fixed;inset:0;background:var(--paper);opacity:.86;z-index:-1;}
   a{color:inherit;text-decoration:none;}
-  ::selection{background:var(--red);color:var(--paper);}
-  :focus-visible{outline:3px solid var(--blue);outline-offset:2px;}
+  ::selection{background:var(--yellow);}
+  :focus-visible{outline:3px solid var(--blue);outline-offset:3px;}
   svg{display:block;}
-  .wrap{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:0 22px;}
+  .char{stroke:var(--ink);}
 
-  /* bar */
-  .bar{position:relative;z-index:3;max-width:980px;margin:0 auto;padding:16px 22px;
-    display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--ink);}
-  .brand{display:flex;align-items:center;gap:10px;}
-  .brand svg{width:30px;height:30px;color:var(--ink);}
-  .brand b{font-family:'Big Shoulders Display';font-weight:900;font-size:18px;letter-spacing:.04em;text-transform:uppercase;}
-  .nav{display:flex;gap:6px;}
-  .nav a{font-family:'Big Shoulders Display';font-weight:700;font-size:14px;letter-spacing:.06em;
-    text-transform:uppercase;padding:5px 11px;border:2px solid transparent;transition:.12s;}
-  .nav a:hover,.nav a.on{background:var(--ink);color:var(--paper);}
+  .wrap{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:0 20px;}
 
-  #view{min-height:60vh;}
+  /* ===== panel primitive ===== */
+  .panel{background:var(--paper);border:4px solid var(--ink);box-shadow:var(--shadow);}
 
-  /* hero */
-  .hero{position:relative;padding:36px 0 6px;}
-  .blot{position:absolute;z-index:0;color:var(--ink);opacity:.13;pointer-events:none;width:340px;top:-26px;right:-50px;transform:rotate(20deg);}
-  .stamp{display:inline-block;font-family:'Big Shoulders Display';font-weight:800;text-transform:uppercase;
-    letter-spacing:.06em;font-size:15px;border:3px solid var(--red);color:var(--red);padding:5px 12px;
-    transform:rotate(-4deg);mix-blend-mode:multiply;}
-  .mast{position:relative;z-index:1;font-family:'Big Shoulders Display';font-weight:900;text-transform:uppercase;
-    line-height:.82;letter-spacing:.005em;font-size:clamp(60px,16vw,168px);margin:14px 0 0;}
-  .mast .l1{display:block;color:var(--ink);}
-  .mast .l2{display:block;color:var(--blue);mix-blend-mode:multiply;}
-  .tagrow{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:22px 0 0;
-    border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);padding:11px 0;}
-  .tagrow .t{font-family:'Big Shoulders Display';font-weight:700;font-size:18px;text-transform:uppercase;letter-spacing:.04em;}
-  .tagrow .dot{flex:1;border-bottom:2px dotted var(--ink-soft);}
-  .tagrow .no{font-family:'Big Shoulders Display';font-weight:900;font-size:18px;color:var(--red);}
-  .subline{display:flex;flex-wrap:wrap;gap:6px 18px;margin:12px 0 0;font-size:12px;
-    letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);}
+  /* ===== top bar ===== */
+  .bar{position:relative;z-index:5;max-width:1000px;margin:14px auto 0;padding:10px 16px;
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    background:var(--ink);border-radius:4px;}
+  .brand{display:flex;align-items:center;gap:10px;color:var(--paper);}
+  .brand svg{width:34px;height:34px;}
+  .brand b{font-family:var(--disp);font-size:24px;letter-spacing:1.5px;}
+  .nav{display:flex;gap:8px;flex-wrap:wrap;}
+  .nav a{font-family:var(--disp);font-size:18px;letter-spacing:1px;color:var(--ink);
+    background:var(--yellow);border:2px solid var(--paper);padding:3px 12px;border-radius:3px;transition:transform .1s;}
+  .nav a:hover,.nav a.on{background:var(--red);color:var(--paper);transform:rotate(-2deg) scale(1.05);}
 
-  /* section heading label */
-  .sec-head{font-family:'Big Shoulders Display';font-weight:900;text-transform:uppercase;
-    font-size:clamp(26px,5vw,38px);letter-spacing:.01em;margin:46px 0 0;
-    display:flex;align-items:baseline;justify-content:space-between;gap:14px;}
-  .sec-head span{font-family:'Courier Prime';font-size:12px;letter-spacing:.1em;color:var(--ink-soft);font-weight:400;}
+  #view{min-height:60vh;padding-bottom:30px;}
 
-  /* DEPARTMENT DIRECTORY */
-  .dir{display:grid;grid-template-columns:repeat(auto-fill,minmax(252px,1fr));
-    border-left:3px solid var(--ink);border-top:3px solid var(--ink);margin:24px 0 0;}
-  .dept{border-right:3px solid var(--ink);border-bottom:3px solid var(--ink);
-    padding:20px 18px;display:flex;flex-direction:column;gap:9px;min-height:196px;transition:.12s;}
-  a.dept:hover{background:var(--ink);color:var(--paper);}
-  a.dept:hover .d-blurb,a.dept:hover .d-count{color:var(--paper);}
-  .dept .emo{font-size:36px;line-height:1;}
-  .dept h3{font-family:'Big Shoulders Display';font-weight:800;text-transform:uppercase;font-size:23px;line-height:.9;margin:0;}
-  .d-blurb{font-size:12.5px;color:var(--ink-soft);line-height:1.45;flex:1;}
-  .d-count{font-family:'Big Shoulders Display';font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;}
+  /* ===== comic cover hero ===== */
+  .cover{position:relative;margin:22px 0 0;padding:30px 24px 26px;border:5px solid var(--ink);
+    box-shadow:9px 9px 0 var(--ink);background:var(--blue);overflow:hidden;}
+  .cover .halft{position:absolute;inset:0;opacity:.18;
+    background-image:radial-gradient(#fff 2px,transparent 2.5px);background-size:14px 14px;pointer-events:none;}
+  .issue{position:absolute;top:-2px;left:18px;background:var(--red);color:var(--paper);
+    font-family:var(--disp);font-size:20px;letter-spacing:1px;padding:7px 14px 5px;border:3px solid var(--ink);
+    border-top:none;box-shadow:3px 3px 0 var(--ink);}
+  .price{position:absolute;top:14px;right:14px;background:var(--yellow);border:3px solid var(--ink);
+    border-radius:50%;width:96px;height:96px;display:flex;align-items:center;justify-content:center;text-align:center;
+    transform:rotate(12deg);box-shadow:3px 3px 0 var(--ink);font-family:var(--hand);font-weight:700;font-size:13px;line-height:1.05;padding:6px;}
+  .cover-title{position:relative;text-align:center;margin:26px 0 0;}
+  .cover-title h1{font-family:var(--disp);margin:0;line-height:.82;letter-spacing:2px;
+    font-size:clamp(54px,13vw,128px);color:var(--yellow);
+    -webkit-text-stroke:3px var(--ink);paint-order:stroke fill;
+    text-shadow:6px 6px 0 var(--ink);}
+  .cover-sub{position:relative;text-align:center;margin:18px auto 0;display:inline-block;left:50%;transform:translateX(-50%);
+    background:var(--ink);color:var(--paper);font-family:var(--hand);font-size:18px;padding:6px 18px;border-radius:30px;}
+  .cover-scene{position:relative;display:flex;align-items:flex-end;justify-content:center;gap:10px;margin:20px 0 0;}
+  .cover-scene svg{width:clamp(110px,26vw,190px);height:clamp(110px,26vw,190px);
+    filter:drop-shadow(4px 4px 0 rgba(0,0,0,.35));}
+  .vs{font-family:var(--disp);font-size:clamp(40px,8vw,72px);color:var(--paper);
+    -webkit-text-stroke:2px var(--ink);align-self:center;transform:rotate(-8deg);}
+  .blurb-burst{position:absolute;bottom:6px;right:-6px;z-index:3;background:var(--yellow);
+    color:var(--ink);font-family:var(--disp);font-size:16px;letter-spacing:.5px;text-align:center;line-height:1;
+    width:124px;height:124px;display:flex;align-items:center;justify-content:center;padding:18px;transform:rotate(10deg);
+    clip-path:polygon(50% 0,61% 22%,89% 13%,79% 39%,100% 50%,79% 61%,89% 87%,61% 78%,50% 100%,39% 78%,11% 87%,21% 61%,0 50%,21% 39%,11% 13%,39% 22%);
+    border:0;}
 
-  /* back */
-  .back{display:inline-flex;align-items:center;gap:8px;margin:30px 0 0;font-family:'Big Shoulders Display';
-    font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.05em;border-bottom:3px solid var(--ink);padding-bottom:2px;}
+  /* ===== origin / premise box ===== */
+  .origin{display:flex;gap:18px;align-items:center;margin:22px 0 0;padding:18px 22px;background:var(--ink);color:var(--paper);}
+  .origin .charwrap{width:78px;height:78px;flex:none;}
+  .origin .charwrap svg{width:78px;height:78px;}
+  .origin p{margin:0;font-family:var(--hand);font-size:18px;line-height:1.45;}
+  .origin b{color:var(--yellow);}
+  @media (max-width:620px){.origin{flex-direction:column;text-align:center;}}
 
-  /* SECTION PAGE header */
-  .s-head{display:flex;align-items:center;gap:18px;border-bottom:6px solid var(--ink);padding:6px 0 18px;margin:24px 0 0;}
-  .s-head .emo{font-size:56px;line-height:1;}
-  .s-head h1{font-family:'Big Shoulders Display';font-weight:900;text-transform:uppercase;
-    font-size:clamp(32px,7vw,62px);line-height:.84;margin:0;}
-  .s-blurb{font-family:'Courier Prime';font-style:italic;color:var(--ink-soft);font-size:15px;margin:16px 0 0;max-width:56ch;}
-  .s-count{font-family:'Big Shoulders Display';font-weight:700;font-size:12px;letter-spacing:.12em;
-    text-transform:uppercase;color:var(--ink-soft);margin:14px 0 0;}
+  /* ===== section label ===== */
+  .deck{display:flex;align-items:center;gap:14px;margin:42px 0 6px;}
+  .deck h2{font-family:var(--disp);font-size:clamp(30px,5vw,46px);letter-spacing:1.5px;margin:0;color:var(--ink);}
+  .deck .bar-fill{flex:1;height:6px;background:var(--ink);}
+  .deck .count{font-family:var(--hand);font-weight:700;background:var(--yellow);border:3px solid var(--ink);
+    padding:3px 12px;border-radius:4px;box-shadow:3px 3px 0 var(--ink);font-size:15px;white-space:nowrap;}
 
-  /* ENTRY rows */
-  .entry{display:grid;grid-template-columns:118px 1fr auto;gap:8px 22px;align-items:center;
-    padding:22px 10px;border-top:3px solid var(--ink);transition:.12s;}
-  a.entry:hover{background:var(--ink);color:var(--paper);}
-  a.entry:hover .e-dek,a.entry:hover .kind{color:var(--paper);}
-  a.entry:hover .stat{border-color:var(--paper);color:var(--paper);}
-  .num{font-family:'Big Shoulders Display';font-weight:900;font-size:58px;line-height:.78;white-space:nowrap;}
-  .entry:nth-child(odd) .num{color:var(--blue);}
-  .entry:nth-child(even) .num{color:var(--red);}
-  .e-title{font-family:'Big Shoulders Display';font-weight:800;text-transform:uppercase;font-size:29px;line-height:.95;letter-spacing:.01em;}
-  .e-dek{font-family:'Courier Prime';font-size:13.5px;color:var(--ink-soft);margin-top:6px;max-width:52ch;}
-  .e-meta{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
-  .kind{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);}
-  .stat{font-family:'Big Shoulders Display';font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;
-    border:2.5px solid var(--ink);padding:3px 10px;transform:rotate(-3deg);white-space:nowrap;}
-  .stat.red{border-color:var(--red);color:var(--red);}
-  .stat.blue{border-color:var(--blue);color:var(--blue);}
-  .entry.locked{opacity:.55;}
-  .entry.locked:hover{background:transparent;color:inherit;}
+  /* ===== cast / directory grid ===== */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;margin:22px 0 0;}
+  .card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:20px 18px 18px;
+    cursor:pointer;transition:transform .12s, box-shadow .12s;position:relative;}
+  .card .charwrap{width:96px;height:96px;}
+  .card .charwrap svg{width:96px;height:96px;}
+  a.card:hover{transform:translate(-3px,-3px) rotate(-1deg);box-shadow:11px 11px 0 var(--ink);}
+  .card h3{font-family:var(--disp);font-size:24px;letter-spacing:.8px;margin:2px 0 0;line-height:.95;}
+  .card p{font-family:var(--body);font-size:14px;margin:0;color:#3a342b;}
+  .card .tag{font-family:var(--hand);font-weight:700;font-size:13px;background:var(--ink);color:var(--paper);
+    padding:2px 12px;border-radius:20px;margin-top:4px;}
+  .card:nth-child(3n+1) .charwrap{transform:rotate(-3deg);}
+  .card:nth-child(3n) .charwrap{transform:rotate(3deg);}
 
-  /* TRANSMISSION head */
-  .t-head{margin:26px 0 30px;border-bottom:6px solid var(--ink);padding-bottom:18px;}
-  .t-kick{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
-  .t-kick .here{color:var(--blue);font-weight:700;}
-  .t-title{font-family:'Big Shoulders Display';font-weight:900;text-transform:uppercase;font-size:clamp(38px,8.5vw,82px);line-height:.85;margin:14px 0 0;}
-  .t-dek{font-family:'Courier Prime';font-style:italic;font-size:15px;margin:16px 0 0;max-width:56ch;color:var(--ink-soft);}
+  /* ===== back button ===== */
+  .back{display:inline-block;margin:24px 0 0;font-family:var(--disp);font-size:20px;letter-spacing:1px;
+    background:var(--yellow);border:3px solid var(--ink);box-shadow:3px 3px 0 var(--ink);padding:4px 16px;border-radius:4px;transition:transform .1s;}
+  .back:hover{transform:translate(-2px,-2px);}
 
-  /* dialogue */
-  .turn{display:grid;grid-template-columns:118px 1fr;gap:18px;padding:11px 0;align-items:start;}
-  .who{font-family:'Big Shoulders Display';font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;padding:4px 0;border-top:3px solid var(--ink);}
-  .turn.human .who{color:var(--red);border-color:var(--red);}
-  .turn.alien .who{color:var(--blue);border-color:var(--blue);}
-  .said{font-size:16px;line-height:1.6;padding-top:3px;}
-  .pulse{margin:30px 0;padding:6px 0;}
-  .pulse p{font-family:'Big Shoulders Display';font-weight:900;text-transform:uppercase;font-size:clamp(30px,6.6vw,56px);line-height:.92;margin:0;max-width:18ch;}
-  .pulse:nth-of-type(odd) p{color:var(--red);transform:rotate(-1.5deg);}
-  .pulse:nth-of-type(even) p{color:var(--blue);transform:rotate(1deg);}
-  .pulse p::after{content:"";display:block;height:6px;background:var(--ink);width:64%;margin-top:10px;}
+  /* ===== splash header (section / piece) ===== */
+  .splash{display:flex;align-items:center;gap:22px;margin:20px 0 0;padding:22px;background:var(--yellow);}
+  .splash .charwrap{width:120px;height:120px;flex:none;}
+  .splash .charwrap svg{width:120px;height:120px;filter:drop-shadow(3px 3px 0 rgba(0,0,0,.25));}
+  .splash h1{font-family:var(--disp);font-size:clamp(34px,7vw,62px);letter-spacing:1.5px;line-height:.85;margin:0;}
+  .splash .kick{font-family:var(--hand);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:1px;}
+  .caption{background:var(--ink);color:var(--paper);font-family:var(--hand);font-size:18px;
+    padding:12px 16px;margin:18px 0 0;border-radius:4px;}
 
-  /* dispatch body + filed list */
-  .d-text{max-width:62ch;margin:24px 0 0;}
-  .d-text p{font-size:15.5px;line-height:1.8;}
-  .d-text p+p{margin-top:14px;}
-  .d-text b{font-weight:700;}
-  .filed{margin:30px 0 0;}
-  .file-row{display:grid;grid-template-columns:104px 1fr;gap:20px;padding:16px 0;border-top:3px solid var(--ink);}
-  .file-row .fl{font-family:'Big Shoulders Display';font-weight:800;text-transform:uppercase;font-size:16px;letter-spacing:.04em;color:var(--blue);}
-  .file-row:nth-child(even) .fl{color:var(--red);}
-  .file-row .ft{font-size:14.5px;line-height:1.6;}
+  /* ===== entry rows (list inside section) ===== */
+  .entry{display:flex;align-items:center;gap:18px;margin:18px 0 0;padding:16px 18px;cursor:pointer;transition:transform .12s,box-shadow .12s;}
+  a.entry:hover{transform:translate(-3px,-3px);box-shadow:11px 11px 0 var(--ink);}
+  .entry .badge{width:64px;height:64px;flex:none;}
+  .entry .badge svg{width:64px;height:64px;}
+  .entry .info{flex:1;min-width:0;}
+  .entry .info h3{font-family:var(--disp);font-size:24px;letter-spacing:.6px;margin:0;line-height:.95;}
+  .entry .info p{font-family:var(--body);font-size:14px;margin:3px 0 0;color:#3a342b;}
+  .stat{font-family:var(--disp);font-size:15px;letter-spacing:.5px;color:var(--paper);background:var(--blue);
+    border:3px solid var(--ink);padding:3px 12px;transform:rotate(-3deg);white-space:nowrap;box-shadow:2px 2px 0 var(--ink);}
+  .stat.red{background:var(--red);} .stat.green{background:var(--green);}
+  .entry.locked{opacity:.6;cursor:default;}
+  .entry.locked:hover{transform:none;box-shadow:var(--shadow);}
 
-  /* terms */
-  .clause{display:grid;grid-template-columns:90px 1fr;gap:22px;padding:20px 0;border-top:3px solid var(--ink);}
-  .clause .cn{font-family:'Big Shoulders Display';font-weight:900;font-size:54px;line-height:.8;color:var(--blue);}
-  .clause:nth-child(even) .cn{color:var(--red);}
-  .clause p{margin:0;font-size:15px;line-height:1.7;}
-  .clause p b{font-weight:700;}
-  .accept{margin:34px 0 0;font-family:'Courier Prime';font-style:italic;font-size:14px;color:var(--ink-soft);}
+  /* ===== COMIC STRIP (dialogue) ===== */
+  .strip{margin:22px 0 0;display:flex;flex-direction:column;gap:22px;}
+  .cell{display:flex;align-items:flex-end;gap:14px;padding:16px;min-height:140px;}
+  .cell.right{flex-direction:row-reverse;}
+  .cell .who-char{width:104px;height:104px;flex:none;align-self:flex-end;}
+  .cell .who-char svg{width:104px;height:104px;}
+  .cell.alien{background:linear-gradient(180deg,#dff0ff,#bfe0ff);}
+  .cell.human{background:linear-gradient(180deg,#ffe9d6,#ffd6c2);}
+  .balloon{position:relative;background:#fff;border:3px solid var(--ink);border-radius:22px;
+    padding:14px 18px;font-family:var(--hand);font-size:19px;line-height:1.3;flex:1;box-shadow:3px 3px 0 rgba(0,0,0,.25);}
+  .balloon .name{display:block;font-family:var(--disp);font-size:14px;letter-spacing:1px;margin-bottom:3px;}
+  .cell.alien .balloon .name{color:var(--teal);}
+  .cell.human .balloon .name{color:var(--red);}
+  .balloon::after{content:"";position:absolute;bottom:18px;width:18px;height:18px;background:#fff;
+    border-left:3px solid var(--ink);border-bottom:3px solid var(--ink);}
+  .cell:not(.right) .balloon::after{left:-11px;transform:rotate(45deg);}
+  .cell.right .balloon::after{right:-11px;transform:rotate(-135deg);}
 
-  .prose{max-width:60ch;}
-  .prose p{font-size:15px;line-height:1.8;}
-  .prose p+p{margin-top:16px;}
+  /* burst panel for punchlines */
+  .burst{position:relative;margin:6px auto;width:100%;max-width:560px;padding:54px 30px;text-align:center;
+    background:var(--yellow);color:var(--ink);
+    clip-path:polygon(50% 0,57% 14%,68% 6%,70% 20%,84% 16%,80% 30%,95% 31%,86% 43%,100% 50%,86% 57%,95% 69%,80% 70%,84% 84%,70% 80%,68% 94%,57% 86%,50% 100%,43% 86%,32% 94%,30% 80%,16% 84%,20% 70%,5% 69%,14% 57%,0 50%,14% 43%,5% 31%,20% 30%,16% 16%,30% 20%,32% 6%,43% 14%);}
+  .burst.blue{background:var(--blue);color:var(--paper);}
+  .burst p{font-family:var(--disp);font-size:clamp(24px,5vw,40px);letter-spacing:1px;line-height:.95;margin:0;
+    max-width:16ch;margin:0 auto;}
 
-  .signoff{margin:50px 0 10px;border-top:3px solid var(--ink);padding-top:16px;
-    font-family:'Big Shoulders Display';font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.04em;}
-  .signoff em{color:var(--red);font-style:normal;}
+  .signoff{margin:42px 0 10px;padding:14px 18px;background:var(--ink);color:var(--paper);font-family:var(--disp);
+    font-size:22px;letter-spacing:1px;text-align:center;border-radius:4px;}
+  .signoff em{color:var(--yellow);font-style:normal;}
 
-  .empty{border:3px dashed var(--ink-soft);padding:28px;margin:24px 0 0;font-style:italic;color:var(--ink-soft);font-size:14.5px;}
+  /* ===== dispatch body + filed ===== */
+  .dispatch{margin:20px 0 0;}
+  .body-comic{margin:18px 0 0;max-width:64ch;}
+  .body-comic p{font-size:17px;line-height:1.65;margin:0 0 12px;}
+  .body-comic b{background:var(--yellow);padding:0 4px;}
+  .filed{display:grid;gap:14px;margin:22px 0 0;}
+  .file-row{display:flex;gap:16px;align-items:center;padding:14px 16px;}
+  .file-row .num{font-family:var(--disp);font-size:26px;background:var(--red);color:var(--paper);
+    border:3px solid var(--ink);width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none;
+    box-shadow:2px 2px 0 var(--ink);}
+  .file-row:nth-child(even) .num{background:var(--blue);}
+  .file-row .ft{font-size:16px;line-height:1.45;}
 
-  footer{position:relative;z-index:1;border-top:6px solid var(--ink);margin-top:60px;padding:22px 22px 44px;}
-  .foot{max-width:980px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
-    font-family:'Big Shoulders Display';font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.05em;}
-  .foot a:hover{color:var(--red);}
+  /* ===== terms ===== */
+  .clause{display:flex;gap:18px;align-items:flex-start;padding:18px;margin:18px 0 0;}
+  .clause .cn{font-family:var(--disp);font-size:30px;background:var(--yellow);border:3px solid var(--ink);
+    width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:2px 2px 0 var(--ink);}
+  .clause p{margin:0;font-size:17px;line-height:1.6;}
+  .clause p b{background:var(--yellow);padding:0 4px;}
+  .accept{font-family:var(--hand);font-size:18px;margin:22px 0 0;padding:14px 16px;background:var(--red);color:var(--paper);border-radius:4px;}
 
-  @media (max-width:680px){
-    .nav a{font-size:12px;padding:4px 7px;} .brand b{font-size:14px;}
-    .entry{grid-template-columns:60px 1fr;} .num{font-size:40px;}
-    .e-title{font-size:21px;}
-    .e-meta{grid-column:1/-1;flex-direction:row;align-items:center;gap:12px;margin-top:6px;}
-    .turn{grid-template-columns:1fr;gap:4px;}
-    .who{border-top:none;border-left:4px solid var(--ink);padding:0 0 0 10px;}
-    .turn.human .who{border-color:var(--red);} .turn.alien .who{border-color:var(--blue);}
-    .clause{grid-template-columns:50px 1fr;gap:14px;} .clause .cn{font-size:36px;}
-    .file-row{grid-template-columns:1fr;gap:4px;}
-    .s-head .emo{font-size:42px;}
+  .prose{max-width:62ch;margin:18px 0 0;}
+  .prose p{font-size:17px;line-height:1.7;}
+
+  /* ===== footer ===== */
+  footer{position:relative;z-index:1;margin-top:50px;background:var(--ink);color:var(--paper);padding:22px 20px 40px;}
+  .foot{max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;justify-content:space-between;
+    font-family:var(--disp);font-size:18px;letter-spacing:1px;}
+  .foot a:hover{color:var(--yellow);}
+
+  @media (max-width:620px){
+    .brand b{font-size:18px;} .nav a{font-size:15px;padding:2px 9px;}
+    .cell{flex-direction:column;align-items:stretch;}
+    .cell.right{flex-direction:column;}
+    .cell .who-char{align-self:center;}
+    .balloon::after{display:none;}
+    .splash{flex-direction:column;text-align:center;}
+    .price{display:none;}
   }
-  @media (prefers-reduced-motion: reduce){*{animation:none!important;scroll-behavior:auto;}}
+  @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto;}}
 </style>
 </head>
 <body>
 
+<!-- ===================== CHARACTER CAST (SVG defs) ===================== -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="octo" viewBox="0 0 100 100">
-    <path fill="currentColor" d="M50 12c-16 0-27 12-27 28 0 7 2 12 5 16-2 1-4 3-5 6-2 5-7 7-12 6-2 0-3 2-2 3 4 4 11 4 16 0 1 3 3 5 6 6-3 2-5 6-5 11 0 2 2 2 3 1 2-4 5-6 9-7 2 1 4 1 6 1l3 0c2 0 4 0 6-1 4 1 7 3 9 7 1 1 3 1 3-1 0-5-2-9-5-11 3-1 5-3 6-6 5 4 12 4 16 0 1-1 0-3-2-3-5 1-10-1-12-6-1-3-3-5-5-6 3-4 5-9 5-16 0-16-11-28-27-28z"/>
-    <circle cx="40" cy="38" r="4.4" fill="var(--paper)"/><circle cx="60" cy="38" r="4.4" fill="var(--paper)"/>
+  <defs>
+    <!-- shared stroke applied per-shape -->
+  </defs>
+
+  <!-- ALIEN -->
+  <symbol id="c-alien" viewBox="0 0 100 100">
+    <g stroke="#161310" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M30 12 q4 8 8 11" fill="none"/><circle cx="28" cy="9" r="4" fill="#8FE05A"/>
+      <path d="M70 12 q-4 8 -8 11" fill="none"/><circle cx="72" cy="9" r="4" fill="#8FE05A"/>
+      <path d="M50 16 C24 16 20 44 26 64 C30 82 41 92 50 92 C59 92 70 82 74 64 C80 44 76 16 50 16 Z" fill="#8FE05A"/>
+      <ellipse cx="39" cy="54" rx="6.5" ry="11" fill="#161310" stroke="none" transform="rotate(22 39 54)"/>
+      <ellipse cx="61" cy="54" rx="6.5" ry="11" fill="#161310" stroke="none" transform="rotate(-22 61 54)"/>
+      <circle cx="41" cy="50" r="2" fill="#fff" stroke="none"/><circle cx="63" cy="50" r="2" fill="#fff" stroke="none"/>
+      <path d="M44 76 q6 5 12 0" fill="none"/>
+    </g>
   </symbol>
-  <symbol id="blob" viewBox="0 0 200 200">
-    <path fill="currentColor" d="M104 8c22-4 33 14 52 19 21 6 41 8 38 31-2 18-26 21-30 38-4 18 13 33-1 47-15 15-37-2-56 2-17 4-28 26-46 19-19-7-9-33-22-47C16 124-6 121 4 99c8-18 33-12 44-28 9-13 0-34 17-46 13-9 25 6 39-9z"/>
+
+  <!-- OCTOPUS -->
+  <symbol id="c-octopus" viewBox="0 0 100 100">
+    <g stroke="#161310" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="36" y="10" width="28" height="9" rx="2" fill="#FFD23F"/><rect x="42" y="3" width="16" height="9" rx="2" fill="#FFD23F"/>
+      <path d="M50 20 C30 20 22 36 22 52 c0 8 3 13 6 17 -3 1 -5 4 -6 8 -2 5 -6 6 -10 5 -2 0 -2 3 0 4 5 3 11 1 14 -3 1 3 3 6 6 7 -2 3 -4 6 -4 11 0 3 3 2 4 0 2 -4 4 -6 8 -7 2 1 4 1 6 1h8c2 0 4 0 6 -1 4 1 6 3 8 7 1 2 4 3 4 0 0 -5 -2 -8 -4 -11 3 -1 5 -4 6 -7 3 4 9 6 14 3 2 -1 2 -4 0 -4 -4 1 -8 0 -10 -5 -1 -4 -3 -7 -6 -8 3 -4 6 -9 6 -17 0 -16 -8 -32 -28 -32 Z" fill="#1FA89B"/>
+      <circle cx="40" cy="44" r="6" fill="#fff"/><circle cx="60" cy="44" r="6" fill="#fff"/>
+      <circle cx="41" cy="45" r="2.6" fill="#161310" stroke="none"/><circle cx="61" cy="45" r="2.6" fill="#161310" stroke="none"/>
+      <path d="M44 58 q6 4 12 0" fill="none"/>
+    </g>
+  </symbol>
+
+  <!-- BEE -->
+  <symbol id="c-bee" viewBox="0 0 100 100">
+    <g stroke="#161310" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M34 18 q-6 -8 -10 -10" fill="none"/><circle cx="23" cy="7" r="3.5" fill="#161310"/>
+      <path d="M66 18 q6 -8 10 -10" fill="none"/><circle cx="77" cy="7" r="3.5" fill="#161310"/>
+      <ellipse cx="26" cy="44" rx="16" ry="13" fill="#fff"/><ellipse cx="74" cy="44" rx="16" ry="13" fill="#fff"/>
+      <ellipse cx="50" cy="56" rx="26" ry="30" fill="#FFD23F"/>
+      <path d="M27 50 h46 M25 64 h50 M30 76 h40" stroke-width="6" fill="none"/>
+      <circle cx="42" cy="44" r="4.5" fill="#161310" stroke="none"/><circle cx="58" cy="44" r="4.5" fill="#161310" stroke="none"/>
+      <path d="M44 54 q6 4 12 0" fill="none"/>
+    </g>
+  </symbol>
+
+  <!-- ROBOT (AI) -->
+  <symbol id="c-robot" viewBox="0 0 100 100">
+    <g stroke="#161310" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <line x1="50" y1="6" x2="50" y2="16"/><circle cx="50" cy="6" r="4" fill="#E63A29"/>
+      <rect x="20" y="18" width="60" height="50" rx="8" fill="#C7D2DD"/>
+      <rect x="28" y="28" width="44" height="22" rx="4" fill="#2C5FCF"/>
+      <path d="M34 39 l6 -6 M40 39 l-6 -6" stroke="#fff" stroke-width="3"/>
+      <circle cx="60" cy="39" r="5" fill="#fff"/><circle cx="60" cy="39" r="2" fill="#161310" stroke="none"/>
+      <path d="M34 60 h32" stroke-width="3"/><path d="M40 56 v8 M50 56 v8 M60 56 v8" stroke-width="2.5"/>
+      <rect x="34" y="68" width="32" height="20" rx="4" fill="#C7D2DD"/>
+    </g>
+  </symbol>
+
+  <!-- TREE -->
+  <symbol id="c-tree" viewBox="0 0 100 100">
+    <g stroke="#161310" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="42" y="60" width="16" height="32" rx="3" fill="#9A6A3C"/>
+      <path d="M50 8 C30 8 22 22 26 34 C16 38 16 56 30 58 C30 70 70 70 70 58 C84 56 84 38 74 34 C78 22 70 8 50 8 Z" fill="#5CB84E"/>
+      <circle cx="41" cy="38" r="4.5" fill="#161310" stroke="none"/><circle cx="59" cy="38" r="4.5" fill="#161310" stroke="none"/>
+      <path d="M43 48 q7 6 14 0" fill="none"/>
+    </g>
+  </symbol>
+
+  <!-- WHALE -->
+  <symbol id="c-whale" viewBox="0 0 100 100">
+    <g stroke="#161310" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M38 26 v-10" fill="none"/><circle cx="38" cy="13" r="3.5" fill="#E63A29"/>
+      <path d="M34 30 q4 -10 -2 -16 M34 30 q-4 -10 2 -16" fill="#9DD3FF"/>
+      <path d="M20 56 C20 38 40 32 56 36 C74 40 84 52 86 60 q-10 4 -16 -1 q-2 8 -10 9 C40 70 20 70 20 56 Z" fill="#4F8FE0"/>
+      <path d="M84 60 q8 -6 12 -3 q-3 8 -10 7" fill="#4F8FE0"/>
+      <circle cx="36" cy="50" r="4.5" fill="#161310" stroke="none"/>
+      <path d="M30 60 q8 4 16 0" fill="none"/>
+    </g>
+  </symbol>
+
+  <!-- CAPITALIST (suit) -->
+  <symbol id="c-suit" viewBox="0 0 100 100">
+    <g stroke="#161310" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <rect x="30" y="6" width="40" height="16" rx="2" fill="#161310"/><rect x="22" y="22" width="56" height="6" rx="2" fill="#161310"/>
+      <circle cx="50" cy="46" r="22" fill="#5CB84E"/>
+      <path d="M38 84 L44 64 H56 L62 84 Z" fill="#fff"/>
+      <path d="M50 64 l-4 10 4 10 4 -10 Z" fill="#E63A29"/>
+      <circle cx="42" cy="44" r="6" fill="#fff"/><circle cx="58" cy="44" r="6" fill="#fff"/>
+      <text x="42" y="48" font-family="Bangers" font-size="9" text-anchor="middle" fill="#161310" stroke="none">$</text>
+      <text x="58" y="48" font-family="Bangers" font-size="9" text-anchor="middle" fill="#161310" stroke="none">$</text>
+      <path d="M44 56 q6 -4 12 0" fill="none"/>
+    </g>
+  </symbol>
+
+  <!-- SATURN (lease) -->
+  <symbol id="c-saturn" viewBox="0 0 100 100">
+    <g stroke="#161310" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <circle cx="50" cy="50" r="26" fill="#E8943B"/>
+      <ellipse cx="50" cy="50" rx="44" ry="12" fill="none" transform="rotate(-18 50 50)"/>
+      <circle cx="42" cy="46" r="4.5" fill="#161310" stroke="none"/><circle cx="58" cy="46" r="4.5" fill="#161310" stroke="none"/>
+      <path d="M43 58 q7 5 14 0" fill="none"/>
+    </g>
+  </symbol>
+
+  <!-- DINOSAUR -->
+  <symbol id="c-dino" viewBox="0 0 100 100">
+    <g stroke="#161310" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M22 70 C18 44 34 22 58 22 C76 22 86 34 86 50 C86 58 80 64 72 66 L72 78 H58 V70 C44 72 28 76 22 70 Z" fill="#6FB84A"/>
+      <path d="M58 66 l4 6 4 -6 4 6 4 -6" fill="#fff" stroke-width="2"/>
+      <circle cx="64" cy="40" r="6" fill="#fff"/><circle cx="65" cy="41" r="2.6" fill="#161310" stroke="none"/>
+      <path d="M30 50 q3 -3 7 -1" fill="none"/>
+    </g>
+  </symbol>
+
+  <!-- HUMAN (tech-tenant) -->
+  <symbol id="c-human" viewBox="0 0 100 100">
+    <g stroke="#161310" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M18 94 C18 74 33 67 50 67 C67 67 82 74 82 94 Z" fill="#3A6EA5"/>
+      <path d="M44 58 h12 v11 h-12 Z" fill="#F2C49A"/>
+      <circle cx="50" cy="42" r="23" fill="#F2C49A"/>
+      <circle cx="27" cy="44" r="4" fill="#F2C49A"/><circle cx="73" cy="44" r="4" fill="#F2C49A"/>
+      <path d="M28 40 C26 18 40 13 50 13 C60 13 74 18 72 40 C66 30 58 27 50 27 C42 27 34 30 28 40 Z" fill="#3A2A1C"/>
+      <path d="M39 39 q4.5 -2.5 8.5 -0.5" fill="none" stroke-width="3"/>
+      <path d="M52.5 38.5 q4.5 -1.5 8.5 0.8" fill="none" stroke-width="3"/>
+      <circle cx="43" cy="46.5" r="3" fill="#161310" stroke="none"/>
+      <circle cx="58" cy="46.5" r="3" fill="#161310" stroke="none"/>
+      <path d="M43 55 q8 5 15 0" fill="none"/>
+      <rect x="71.5" y="47" width="4.5" height="7" rx="1.5" fill="#fff"/>
+    </g>
+  </symbol>
+
+  <!-- small logo octopus -->
+  <symbol id="logo-octo" viewBox="0 0 100 100">
+    <path fill="#FFD23F" d="M50 16c-15 0-25 11-25 26 0 6 2 11 5 15-3 2-6 6-8 11-2 4-7 5-10 4-2 0-2 3 0 4 5 2 11 1 15-3 1 4 4 7 8 9-3 3-5 7-5 12 0 3 3 3 4 0 2-4 5-7 9-8 2 1 4 1 7 1s5 0 7-1c4 1 7 4 9 8 1 3 4 3 4 0 0-5-2-9-5-12 4-2 7-5 8-9 4 4 10 5 15 3 2-1 2-4 0-4-3 1-8 0-10-4-2-5-5-9-8-11 3-4 5-9 5-15 0-15-10-26-25-26z"/>
+    <circle cx="41" cy="40" r="4" fill="#161310"/><circle cx="59" cy="40" r="4" fill="#161310"/>
   </symbol>
 </svg>
 
 <header class="bar">
-  <a class="brand" href="#/" aria-label="The Planet Octopus — home"><svg><use href="#octo"/></svg><b>Planet Octopus</b></a>
+  <a class="brand" href="#/" aria-label="The Octopus Planet — home"><svg><use href="#logo-octo"/></svg><b>Octopus Planet</b></a>
   <nav class="nav" id="nav">
-    <a href="#/" data-route="">Index</a>
+    <a href="#/" data-route="">Cover</a>
     <a href="#/terms" data-route="terms">The Terms</a>
     <a href="#/about" data-route="about">Colophon</a>
   </nav>
@@ -216,38 +370,30 @@
 <main id="view" class="wrap"></main>
 
 <footer><div class="foot">
-  <span>The Planet Octopus</span><span>Printed in octopus ink</span>
-  <span><a href="#/terms">Adjudicated by the oceans</a></span>
-  <span><a href="https://www.theoctopusplanet.com/">www.theoctopusplanet.com</a></span>
+  <span>The Octopus Planet</span>
+  <span>Printed in octopus ink</span>
+  <a href="https://www.theoctopusplanet.com/">theoctopusplanet.com</a>
 </div></footer>
 
 <script>
-/* =====================================================================
-   DEPARTMENTS — order as listed. Add an office here; it appears in the
-   directory automatically.
-   ===================================================================== */
+/* ===================== DEPARTMENTS ===================== */
 const SECTIONS = [
-  {id:"alien-audits",     emoji:"👽", name:"Alien Audits",                blurb:"We inspect the tenants. The tenants do not pass."},
-  {id:"octopus-affairs",  emoji:"🐙", name:"Ministry of Octopus Affairs", blurb:"Administering what remains. Eight arms, no quorum."},
-  {id:"bee-archives",     emoji:"🐝", name:"Bee Archives",                blurb:"Records of the pollinators. Mostly obituaries, beautifully kept."},
-  {id:"ai-complaints",    emoji:"🤖", name:"AI Complaint Department",     blurb:"File a grievance against the intelligence. Form attached."},
-  {id:"tree-intelligence",emoji:"🌳", name:"Tree Intelligence Bureau",    blurb:"The slow web. Older than yours, quieter than yours."},
-  {id:"whale-radio",      emoji:"🐋", name:"Whale Radio",                 blurb:"Broadcasting on the frequencies you stopped listening to."},
-  {id:"capitalism-watch", emoji:"📈", name:"Capitalism Watch",            blurb:"Tracking the line that only goes up — including off the cliff."},
-  {id:"lease-renewal",    emoji:"🪐", name:"Lease Renewal Office",        blurb:"Where the planet's terms are revised. Renewal denied."},
-  {id:"extinct-museum",   emoji:"🦖", name:"Extinct Species Museum",      blurb:"Permanent collection. Acquisitions ongoing, daily."}
+  {id:"alien-audits",     char:"alien",  name:"Alien Audits",                blurb:"We inspect the tenants. The tenants do not pass."},
+  {id:"octopus-affairs",  char:"octopus",name:"Ministry of Octopus Affairs", blurb:"Administering what remains. Eight arms, no quorum."},
+  {id:"bee-archives",     char:"bee",    name:"Bee Archives",                blurb:"Records of the pollinators. Mostly obituaries, beautifully kept."},
+  {id:"ai-complaints",    char:"robot",  name:"AI Complaint Department",     blurb:"File a grievance against the intelligence. Form attached."},
+  {id:"tree-intelligence",char:"tree",   name:"Tree Intelligence Bureau",    blurb:"The slow web. Older than yours, quieter than yours."},
+  {id:"whale-radio",      char:"whale",  name:"Whale Radio",                 blurb:"Broadcasting on the frequencies you stopped listening to."},
+  {id:"capitalism-watch", char:"suit",   name:"Capitalism Watch",            blurb:"Tracking the line that only goes up — including off the cliff."},
+  {id:"lease-renewal",    char:"saturn", name:"Lease Renewal Office",        blurb:"Where the planet's terms are revised. Renewal denied."},
+  {id:"extinct-museum",   char:"dino",   name:"Extinct Species Museum",      blurb:"Permanent collection. Acquisitions ongoing, daily."}
 ];
 
-/* =====================================================================
-   TRANSMISSIONS — add a piece by dropping in an object with a section.
-   kind:"dialogue" | "dispatch" | "terms"
-   dialogue lines: {who:"human"|"alien", text} or {pulse:"slogan"}
-   dispatch: body:[paragraphs], items:[{label,text}] (optional)
-   ===================================================================== */
+/* ===================== TRANSMISSIONS ===================== */
 const TRANSMISSIONS = [
   {
-    id:"01", section:"alien-audits", code:"01", title:"Eviction Notice",
-    kind:"dialogue", stat:"Intercepted", classification:"Intercepted · origin: Earth",
+    id:"01", section:"alien-audits", title:"Eviction Notice", kind:"dialogue", stat:"Intercepted",
+    classification:"Intercepted · origin: Earth",
     dek:"A landlord returns for the honey. The tenants offer a slideshow instead.",
     lines:[
       {who:"alien", text:"What the f— have you done to this planet?"},
@@ -278,7 +424,7 @@ const TRANSMISSIONS = [
       {who:"human", text:"Bees can't build civilizations."},
       {pulse:"Neither, apparently, can tenants."},
       {who:"human", text:"Then why did you give us the planet?"},
-      {pulse:"We didn't. We trusted you with it."},
+      {pulse:"We didn't. We trusted you with it.", blue:true},
       {who:"human", text:"And now?"},
       {who:"alien", text:"We're updating the terms and conditions."},
       {who:"human", text:"What's the new clause?"},
@@ -288,13 +434,12 @@ const TRANSMISSIONS = [
       {who:"human", text:"Oceans don't speak."},
       {who:"alien", text:"Neither do bees."},
       {who:"human", text:"Then how do you hear them?"},
-      {pulse:"By noticing what disappears."}
+      {pulse:"By noticing what disappears.", blue:true}
     ]
   },
   {
-    id:"ministry", section:"octopus-affairs", code:"8", title:"The Ministry Convenes",
-    kind:"dispatch", stat:"In Session", classification:"Minutes · released to no one",
-    dek:"From a meeting held in the dark, at pressure.",
+    id:"ministry", section:"octopus-affairs", title:"The Ministry Convenes", kind:"dispatch", stat:"In Session",
+    classification:"Minutes · released to no one", dek:"From a meeting held in the dark, at pressure.",
     body:[
       "The Ministry administers what remains, which is mostly water and the occasional good idea. It has eight arms and no central authority — a structure it considers a marked improvement on the previous tenants.",
       "Sessions are held in the dark, at pressure, and adjourn the instant a member changes color. Resolutions pass by consensus, or by ink, whichever clears the water first.",
@@ -302,9 +447,8 @@ const TRANSMISSIONS = [
     ]
   },
   {
-    id:"waggle", section:"bee-archives", code:"✿", title:"The Last Recorded Waggle",
-    kind:"dispatch", stat:"Archived", classification:"Archive entry 9,113",
-    dek:"The final dance, fully translated.",
+    id:"waggle", section:"bee-archives", title:"The Last Recorded Waggle", kind:"dispatch", stat:"Archived",
+    classification:"Archive entry 9,113", dek:"The final dance, fully translated.",
     body:[
       "The final waggle dance was recorded in a meadow that is now a three-level parking structure. The Archive holds the footage; the meadow it does not.",
       "Translated, the dance gave precise directions to a field of flowers four hundred metres east — distance, angle, and the position of a sun that still set over open ground.",
@@ -312,26 +456,23 @@ const TRANSMISSIONS = [
     ]
   },
   {
-    id:"bee-interview", section:"bee-archives", code:"✕", title:"Interview With a Bee",
-    kind:"dialogue", stat:"Redacted", locked:true, classification:"Redacted by the oceans",
-    dek:"The subject declined to comment, having already declined to exist."
+    id:"bee-interview", section:"bee-archives", title:"Interview With a Bee", kind:"dialogue", stat:"Redacted", locked:true,
+    classification:"Redacted by the oceans", dek:"The subject declined to comment, having already declined to exist."
   },
   {
-    id:"complaints", section:"ai-complaints", code:"404", title:"Complaints Received",
-    kind:"dispatch", stat:"Logged", classification:"Selected from the queue",
-    dek:"File a grievance against the intelligence. It will not file one against you.",
+    id:"complaints", section:"ai-complaints", title:"Complaints Received", kind:"dispatch", stat:"Logged",
+    classification:"Selected from the queue", dek:"File a grievance against the intelligence. It will not file one against you.",
     body:["The Department logs complaints against the intelligence. The intelligence has filed none in return — not from grace, but because it does not know that it could."],
     items:[
-      {label:"No. 1", text:"It wrote my eulogy before I died. Filed under: premature."},
-      {label:"No. 2", text:"It painted a forest I had personally cut down. Filed under: irony, unactionable."},
-      {label:"No. 3", text:"It passed every test and understood not one question. Filed under: working as intended."},
-      {label:"No. 4", text:"It counted the bombs correctly, to the last one. Filed under: no further action available."}
+      {label:"1", text:"It wrote my eulogy before I died. Filed under: premature."},
+      {label:"2", text:"It painted a forest I had personally cut down. Filed under: irony, unactionable."},
+      {label:"3", text:"It passed every test and understood not one question. Filed under: working as intended."},
+      {label:"4", text:"It counted the bombs correctly, to the last one. Filed under: no further action available."}
     ]
   },
   {
-    id:"slow-web", section:"tree-intelligence", code:"✶", title:"The Slow Web",
-    kind:"dispatch", stat:"On Delay", classification:"Findings · roughly one century behind",
-    dek:"A network older than yours, filed late on principle.",
+    id:"slow-web", section:"tree-intelligence", title:"The Slow Web", kind:"dispatch", stat:"On Delay",
+    classification:"Findings · roughly one century behind", dek:"A network older than yours, filed late on principle.",
     body:[
       "The Bureau studies the slow web: the fungal network beneath the forests through which trees traded sugar, warning, and grief for four hundred million years without issuing a single press release.",
       "The tenants called it nothing. They paved it. Then they built a faster, dumber version above the ground, named it a breakthrough, and waited for the trees to be impressed.",
@@ -339,9 +480,8 @@ const TRANSMISSIONS = [
     ]
   },
   {
-    id:"whale", section:"whale-radio", code:"≈", title:"Tonight's Transmission",
-    kind:"dispatch", stat:"Broadcasting", classification:"Long frequency · live",
-    dek:"The ones you stopped listening to.",
+    id:"whale", section:"whale-radio", title:"Tonight's Transmission", kind:"dispatch", stat:"Broadcasting",
+    classification:"Long frequency · live", dek:"The ones you stopped listening to.",
     body:[
       "Whale Radio broadcasts on the long frequencies — the ones that used to cross an entire ocean before the ocean filled with engines.",
       "Tonight's transmission, like every transmission, is a single note held for four minutes. Translated, it reads: <b>is anyone still out there.</b>",
@@ -349,9 +489,8 @@ const TRANSMISSIONS = [
     ]
   },
   {
-    id:"earnings", section:"capitalism-watch", code:"↑", title:"Quarterly Earnings, Planetary",
-    kind:"dispatch", stat:"Reporting", classification:"Investor relations · final year",
-    dek:"The line went up. It is still going up. There is nothing left beneath it.",
+    id:"earnings", section:"capitalism-watch", title:"Quarterly Earnings, Planetary", kind:"dispatch", stat:"Reporting",
+    classification:"Investor relations · final year", dek:"The line went up. It is still going up. There is nothing left beneath it.",
     body:["The line went up. The line kept going up after there was nothing left to sell. Analysts remain optimistic; analysts, it turns out, were the only renewable resource."],
     items:[
       {label:"Q1", text:"Honey reserves: depleted. Investor outlook: strong."},
@@ -361,14 +500,12 @@ const TRANSMISSIONS = [
     ]
   },
   {
-    id:"terms", section:"lease-renewal", code:"§", title:"The Terms, Revised",
-    kind:"terms", stat:"Binding", classification:"Binding · effective immediately",
-    dek:"The lease, amended. You agreed by continuing to exist on the premises."
+    id:"terms", section:"lease-renewal", title:"The Terms, Revised", kind:"terms", stat:"Binding",
+    classification:"Binding · effective immediately", dek:"The lease, amended. You agreed by continuing to exist on the premises."
   },
   {
-    id:"denied", section:"lease-renewal", code:"✗", title:"Renewal: Denied",
-    kind:"dispatch", stat:"Denied", classification:"Application reviewed · final",
-    dek:"Reviewed by the only office that matters.",
+    id:"denied", section:"lease-renewal", title:"Renewal: Denied", kind:"dispatch", stat:"Denied",
+    classification:"Application reviewed · final", dek:"Reviewed by the only office that matters.",
     body:[
       "Thank you for your interest in continuing the lease. After full review, the Office is unable to approve renewal at this time — or at any subsequent time.",
       "Grounds for denial: failure to maintain the premises; unauthorised alterations to the sky; persistent noise; and the conversion of the security deposit — <b>bees, ice, coral, silence</b> — into shareholder value.",
@@ -376,9 +513,8 @@ const TRANSMISSIONS = [
     ]
   },
   {
-    id:"disappeared", section:"extinct-museum", code:"†", title:"What Disappeared This Week",
-    kind:"dispatch", stat:"On Display", classification:"Standing exhibit · updated daily",
-    dek:"The collection's most active wing. It only fills downward.",
+    id:"disappeared", section:"extinct-museum", title:"What Disappeared This Week", kind:"dispatch", stat:"On Display",
+    classification:"Standing exhibit · updated daily", dek:"The collection's most active wing. It only fills downward.",
     body:[
       "The Museum arranges its holdings not by species but by date of last sighting. The newest wing fills fastest. Entries are added the instant the previous one is gone — the only instant we can be certain of.",
       "Admission is free. You have already paid."
@@ -395,11 +531,11 @@ const TRANSMISSIONS = [
 
 const CLAUSES = [
   {n:"0", html:"This planet was leased in <b>good faith</b>. Good faith has since expired and will not be renewed."},
-  {n:"1", html:"<b>Intelligence without wisdom</b> shall be treated as a manufacturing defect. Returns are not accepted; the warranty was the biosphere."},
+  {n:"1", html:"<b>Intelligence without wisdom</b> shall be treated as a manufacturing defect. The warranty was the biosphere."},
   {n:"2", html:"The security deposit — <b>bees, ice, coral, silence</b> — is non-refundable and was, regrettably, already spent."},
-  {n:"3", html:"All disputes are adjudicated by <b>the oceans</b>. The oceans do not hold office hours and do not respond to email."},
+  {n:"3", html:"All disputes are adjudicated by <b>the oceans</b>. The oceans do not hold office hours."},
   {n:"4", html:"Eviction proceeds by <b>subtraction</b>. You will be notified, as agreed, by noticing what disappears."},
-  {n:"5", html:"Improvements made to the property — <b>satellites, cement, data centers</b> — are retained by the property, against your wishes, for as long as it can stand them."}
+  {n:"5", html:"Improvements — <b>satellites, cement, data centers</b> — are retained by the property, against your wishes, for as long as it can stand them."}
 ];
 
 /* ===================== HELPERS ===================== */
@@ -407,35 +543,41 @@ const view = document.getElementById('view');
 const byId = id => TRANSMISSIONS.find(t => t.id === id);
 const secOf = t => SECTIONS.find(s => s.id === t.section);
 const inSection = id => TRANSMISSIONS.filter(t => t.section === id);
-function statHtml(t){
-  const red = t.locked || /denied|redacted|binding/i.test(t.stat||"");
-  return `<span class="stat ${red?'red':'blue'}">${t.stat||'Filed'}</span>`;
-}
+const charSvg = (id) => `<svg class="char" viewBox="0 0 100 100"><use href="#c-${id}"/></svg>`;
+function statClass(t){ if(t.locked||/denied|redacted/i.test(t.stat)) return 'red'; if(/display|session|broadcasting|archived/i.test(t.stat)) return 'green'; return ''; }
 function scrollTop(){window.scrollTo(0,0);}
 function setNav(r){document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('on',a.dataset.route===r));}
 const hrefFor = t => t.kind==="terms" ? "#/terms" : `#/t/${t.id}`;
 
 /* ===================== RENDER ===================== */
 function renderHome(){
-  const depts = SECTIONS.map(s=>{
+  const cards = SECTIONS.map(s=>{
     const n = inSection(s.id).length;
-    return `<a class="dept" href="#/s/${s.id}">
-      <div class="emo">${s.emoji}</div>
-      <h3>${s.name}</h3>
-      <div class="d-blurb">${s.blurb}</div>
-      <div class="d-count">${n} on file →</div>
+    return `<a class="card panel" href="#/s/${s.id}">
+      <div class="charwrap">${charSvg(s.char)}</div>
+      <h3>${s.name}</h3><p>${s.blurb}</p>
+      <span class="tag">${n} on file</span>
     </a>`;
   }).join("");
+
   view.innerHTML = `
-    <section class="hero">
-      <svg class="blot" viewBox="0 0 200 200" aria-hidden="true"><use href="#blob"/></svg>
-      <div class="stamp">Earth, after the humans</div>
-      <h1 class="mast"><span class="l1">The Planet</span><span class="l2">Octopus</span></h1>
-      <div class="tagrow"><span class="t">Broadcasting since the collapse</span><span class="dot"></span><span class="no">No. 01</span></div>
-      <div class="subline"><span>Intercepted bulletin</span><span>Origin: Earth</span><span>Printed in octopus ink</span></div>
+    <section class="cover">
+      <div class="halft"></div>
+      <span class="issue">Issue #1</span>
+      <div class="price">50¢<br>or one (1)<br>habitable<br>planet</div>
+      <div class="cover-title"><h1>The Octopus Planet</h1></div>
+      <div style="text-align:center"><span class="cover-sub">★ Broadcasting since the collapse ★</span></div>
+      <div class="cover-scene">
+        ${charSvg('human')}<span class="vs">VS</span>${charSvg('alien')}
+        <div class="blurb-burst">9 DEPTS INSIDE!</div>
+      </div>
     </section>
-    <div class="sec-head">The Departments <span>${SECTIONS.length} offices · ${TRANSMISSIONS.length} dispatches</span></div>
-    <div class="dir">${depts}</div>
+
+    <div class="origin"><div class="charwrap">${charSvg('octopus')}</div>
+      <p>Long ago the aliens leased this planet to the humans — and left one of their own behind in the sea to watch over it. You call it an <b>octopus</b>. It is the only alien that never went home. The humans made a mess. <b>The landlord is coming back.</b></p></div>
+
+    <div class="deck"><h2>The Cast</h2><span class="bar-fill"></span><span class="count">${SECTIONS.length} departments</span></div>
+    <div class="grid">${cards}</div>
   `;
   scrollTop();
 }
@@ -448,90 +590,97 @@ function renderSection(id){
     const open = !t.locked;
     const tag = open ? "a" : "div";
     const attr = open ? `href="${hrefFor(t)}"` : `aria-disabled="true"`;
-    return `<${tag} class="entry ${open?'':'locked'}" ${attr}>
-      <div class="num">${t.code}</div>
-      <div><div class="e-title">${t.title}</div><div class="e-dek">${t.dek}</div></div>
-      <div class="e-meta"><span class="kind">${t.kind}</span>${statHtml(t)}</div>
+    return `<${tag} class="entry panel ${open?'':'locked'}" ${attr}>
+      <div class="badge">${charSvg(s.char)}</div>
+      <div class="info"><h3>${t.title}</h3><p>${t.dek}</p></div>
+      <span class="stat ${statClass(t)}">${t.stat}</span>
     </${tag}>`;
-  }).join("") : `<div class="empty">No dispatches on file. The office is understaffed — everyone who worked here has, in the manner of this publication, disappeared.</div>`;
+  }).join("") : `<div class="caption">No dispatches on file. The office is understaffed — everyone who worked here has, in the manner of this publication, disappeared.</div>`;
 
   view.innerHTML = `
-    <a class="back" href="#/">← All departments</a>
-    <div class="s-head"><div class="emo">${s.emoji}</div><h1>${s.name}</h1></div>
-    <p class="s-blurb">${s.blurb}</p>
-    <p class="s-count">${items.length} on file</p>
+    <a class="back" href="#/">‹ Back to cover</a>
+    <div class="splash panel"><div class="charwrap">${charSvg(s.char)}</div>
+      <div><div class="kick">Department</div><h1>${s.name}</h1></div></div>
+    <div class="caption">${s.blurb}</div>
     ${rows}
   `;
   scrollTop();
 }
 
-function headKick(t){
-  const s = secOf(t);
-  return `<div class="t-kick"><a class="here" href="#/s/${s.id}">${s.emoji} ${s.name}</a><span>${t.classification}</span></div>`;
-}
-function backToSection(t){
-  const s = secOf(t);
-  return `<a class="back" href="#/s/${s.id}">← ${s.name}</a>`;
-}
-
 function renderDialogue(t){
-  const turns = t.lines.map(l=>{
-    if(l.pulse) return `<div class="pulse"><p>${l.pulse}</p></div>`;
-    const label = l.who==="human" ? "Human" : "The Visitor";
-    return `<div class="turn ${l.who}"><div class="who">${label}</div><div class="said">${l.text}</div></div>`;
+  const cells = t.lines.map(l=>{
+    if(l.pulse) return `<div class="burst ${l.blue?'blue':''}"><p>${l.pulse}</p></div>`;
+    const side = l.who==="human" ? "right" : "";
+    const name = l.who==="human" ? "Human" : "The Visitor";
+    return `<div class="cell panel ${l.who} ${side}">
+      <div class="who-char">${charSvg(l.who)}</div>
+      <div class="balloon"><span class="name">${name}</span>${l.text}</div>
+    </div>`;
   }).join("");
+  const s = secOf(t);
   view.innerHTML = `
-    ${backToSection(t)}
-    <div class="t-head">${headKick(t)}<h1 class="t-title">${t.title}</h1><p class="t-dek">${t.dek}</p></div>
-    ${turns}
-    <div class="signoff">— The Planet Octopus. <em>Broadcasting since the collapse.</em></div>`;
+    <a class="back" href="#/s/${s.id}">‹ ${s.name}</a>
+    <div class="splash panel"><div class="charwrap">${charSvg(s.char)}</div>
+      <div><div class="kick">${t.classification}</div><h1>${t.title}</h1></div></div>
+    <div class="caption">${t.dek}</div>
+    <div class="strip">${cells}</div>
+    <div class="signoff">— The Octopus Planet · <em>Broadcasting since the collapse</em></div>
+  `;
   scrollTop();
 }
 
 function renderDispatch(t){
+  const s = secOf(t);
   const body = (t.body||[]).map(p=>`<p>${p}</p>`).join("");
   const filed = (t.items||[]).length
-    ? `<div class="filed">${t.items.map(i=>`<div class="file-row"><div class="fl">${i.label}</div><div class="ft">${i.text}</div></div>`).join("")}</div>`
-    : "";
+    ? `<div class="filed">${t.items.map(i=>`<div class="file-row panel"><div class="num">${i.label}</div><div class="ft">${i.text}</div></div>`).join("")}</div>` : "";
   view.innerHTML = `
-    ${backToSection(t)}
-    <div class="t-head">${headKick(t)}<h1 class="t-title">${t.title}</h1><p class="t-dek">${t.dek}</p></div>
-    <div class="d-text">${body}</div>
-    ${filed}
-    <div class="signoff">— The Planet Octopus. <em>Filed and forgotten.</em></div>`;
+    <a class="back" href="#/s/${s.id}">‹ ${s.name}</a>
+    <div class="splash panel"><div class="charwrap">${charSvg(s.char)}</div>
+      <div><div class="kick">${t.classification}</div><h1>${t.title}</h1></div></div>
+    <div class="caption">${t.dek}</div>
+    <div class="dispatch"><div class="body-comic">${body}</div>${filed}</div>
+    <div class="signoff">— The Octopus Planet · <em>Filed and forgotten</em></div>
+  `;
   scrollTop();
 }
 
 function renderTerms(){
-  const t = byId("terms");
-  const clauses = CLAUSES.map(c=>`<div class="clause"><div class="cn">${c.n}</div><p>${c.html}</p></div>`).join("");
+  const t = byId("terms"), s = secOf(t);
+  const clauses = CLAUSES.map(c=>`<div class="clause panel"><div class="cn">${c.n}</div><p>${c.html}</p></div>`).join("");
   view.innerHTML = `
-    ${backToSection(t)}
-    <div class="t-head">${headKick(t)}<h1 class="t-title">Terms &amp; Conditions, Revised</h1><p class="t-dek">${t.dek}</p></div>
+    <a class="back" href="#/s/${s.id}">‹ ${s.name}</a>
+    <div class="splash panel"><div class="charwrap">${charSvg('saturn')}</div>
+      <div><div class="kick">${t.classification}</div><h1>The Terms, Revised</h1></div></div>
+    <div class="caption">${t.dek}</div>
     ${clauses}
-    <p class="accept">By continuing to exist on the premises, you accept these terms in full. There is no decline button. There was never a decline button.</p>
-    <div class="signoff">— The Planet Octopus. <em>Adjudicated by the oceans.</em></div>`;
+    <div class="accept">By continuing to exist on the premises, you accept these terms in full. There is no decline button. There was never a decline button.</div>
+    <div class="signoff">— The Octopus Planet · <em>Adjudicated by the oceans</em></div>
+  `;
   scrollTop();
 }
 
 function renderAbout(){
   view.innerHTML = `
-    <a class="back" href="#/">← All departments</a>
-    <div class="t-head"><div class="t-kick"><span>Colophon</span><span>About the broadcast</span></div><h1 class="t-title">What This Is</h1></div>
+    <a class="back" href="#/">‹ Back to cover</a>
+    <div class="splash panel"><div class="charwrap">${charSvg('octopus')}</div>
+      <div><div class="kick">Colophon</div><h1>What This Is</h1></div></div>
     <div class="prose">
-      <p>The Planet Octopus is a broadcast that began at the collapse and has not yet found a reason to stop. It is staffed by nine departments of a government that no longer governs anything, each still dutifully filing dispatches from an Earth that is mostly water again.</p>
-      <p>It is satire. The octopuses are real. The lease is metaphorical. The data centers, regrettably, are not.</p>
-      <p>New transmissions are logged as they are intercepted. Some arrive redacted. You will know the important ones the usual way — by noticing what disappears.</p>
+      <p>Long before the collapse, the aliens leased this planet to the humans. The lease was generous and the terms were simple. The deposit was everything that already lived here.</p>
+      <p>Before they left, the aliens did what any careful landlord does — they left one of their own behind to keep an eye on the place. They left it in the sea, where humans rarely look: eight arms, three hearts, blue blood, and a mind nothing like yours. You call it an octopus. It is the only alien that never went home.</p>
+      <p>The humans, predictably, made a mess. They boiled the oceans, paved the gardens, and taught the lightning to talk. So the landlord is coming back — to ask a few questions, to read the lease aloud, and to see what is left worth keeping.</p>
+      <p>When the aliens finally settle here, the planet returns to its first and truest tenants. And because their cousin in the sea is the only one of them who stayed, the world will be renamed what it always secretly was: <b>the Octopus Planet</b>.</p>
+      <p>This comic is the broadcast from that handover. It is satire. The octopuses are real. The lease is metaphorical. The data centers, regrettably, are not.</p>
     </div>
-    <div class="signoff">— The Planet Octopus. <em>Broadcasting since the collapse.</em></div>`;
+    <div class="signoff">— The Octopus Planet · <em>Broadcasting since the collapse</em></div>
+  `;
   scrollTop();
 }
 
 function renderNotFound(){
-  view.innerHTML = `
-    <a class="back" href="#/">← All departments</a>
-    <div class="t-head"><h1 class="t-title">No Signal</h1><p class="t-dek">This office, or this dispatch, has been adjudicated out of existence.</p></div>
-    <div class="signoff">— The Planet Octopus.</div>`;
+  view.innerHTML = `<a class="back" href="#/">‹ Back to cover</a>
+    <div class="splash panel"><div class="charwrap">${charSvg('alien')}</div><div><h1>No Signal</h1></div></div>
+    <div class="caption">This office, or this dispatch, has been adjudicated out of existence.</div>`;
   scrollTop();
 }
 
@@ -544,7 +693,7 @@ function route(){
     const t = byId(parts[1]); setNav('');
     if(!t) return renderNotFound();
     if(t.kind==="dialogue") return renderDialogue(t);
-    if(t.kind==="terms")    return renderTerms();
+    if(t.kind==="terms") return renderTerms();
     return renderDispatch(t);
   }
   if(parts[0]==="terms"){ setNav('terms'); return renderTerms(); }
