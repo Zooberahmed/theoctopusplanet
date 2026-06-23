@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE PLANET OCTOPUS — Broadcasting Since The Collapse</title>
+<meta name="description" content="Earth leased to humans. Lease currently under review. An interspecies comic broadcast from a collapsed future — alien auditors, octopus ministers, and the last bee, reviewing humanity's performance.">
+<meta name="theme-color" content="#0a0a0f">
+<link rel="canonical" href="https://www.theoctopusplanet.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Planet Octopus">
+<meta property="og:title" content="THE PLANET OCTOPUS — Broadcasting Since The Collapse">
+<meta property="og:description" content="Earth leased to humans. Lease currently under review.">
+<meta property="og:url" content="https://www.theoctopusplanet.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="THE PLANET OCTOPUS">
+<meta name="twitter:description" content="Earth leased to humans. Lease currently under review.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%239d6bff'/%3E%3Cpath fill='%230a0a0f' d='M50 16c-15 0-25 11-25 26 0 6 2 11 5 15-3 2-6 6-8 11-2 4-7 5-10 4-2 0-2 3 0 4 5 2 11 1 15-3 1 4 4 7 8 9-3 3-5 7-5 12 0 3 3 3 4 0 2-4 5-7 9-8 2 1 4 1 7 1s5 0 7-1c4 1 7 4 9 8 1 3 4 3 4 0 0-5-2-9-5-12 4-2 7-5 8-9 4 4 10 5 15 3 2-1 2-4 0-4-3 1-8 0-10-4-2-5-5-9-8-11 3-4 5-9 5-15 0-15-10-26-25-26z'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --void:#0a0a0f; --void2:#13131d; --panel:#1a1a26;
+    --paper:#ECE3CF; --paper2:#DCCFB0; --ink:#15110c;
+    --purple:#9d6bff; --purple-deep:#6c3bd1; --cyan:#2fe6e6; --red:#ff4438; --yellow:#ffe14d; --green:#5fd97a;
+    --txt:#E7E3D6; --dim:#8a86a0;
+    --disp:'Bangers', system-ui, cursive; --mono:'IBM Plex Mono', ui-monospace, monospace; --hand:'Patrick Hand', cursive;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--void);color:var(--txt);font-family:var(--mono);font-size:15px;line-height:1.55;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  /* starfield + vignette */
+  body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(1px 1px at 20% 30%, #fff6, transparent),
+      radial-gradient(1px 1px at 70% 60%, #fff5, transparent),
+      radial-gradient(1px 1px at 40% 80%, #fff4, transparent),
+      radial-gradient(1px 1px at 85% 20%, #fff6, transparent),
+      radial-gradient(1200px 600px at 50% -10%, rgba(157,107,255,.18), transparent 70%),
+      radial-gradient(900px 500px at 90% 110%, rgba(47,230,230,.10), transparent 70%);}
+  a{color:inherit;text-decoration:none;}
+  ::selection{background:var(--purple);color:#fff;}
+  :focus-visible{outline:3px solid var(--cyan);outline-offset:3px;}
+  svg{display:block;}
+  .wrap{position:relative;z-index:2;max-width:1080px;margin:0 auto;padding:0 18px;}
+
+  /* ===== ambient floating creatures ===== */
+  #ambient{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden;}
+  #ambient .f{position:absolute;opacity:.5;}
+  .tentacle-l{left:-40px;bottom:-30px;width:240px;color:var(--purple);opacity:.35;animation:sway 9s ease-in-out infinite;}
+  .tentacle-r{right:-40px;top:-30px;width:220px;color:var(--purple-deep);opacity:.3;transform:scaleY(-1) rotate(8deg);animation:sway 11s ease-in-out infinite reverse;}
+  .sat{top:12%;left:-60px;width:60px;color:var(--cyan);animation:cross 26s linear infinite;}
+  .bee1{top:30%;width:30px;color:var(--yellow);animation:zig 18s linear infinite;}
+  .bee2{top:68%;width:24px;color:var(--yellow);animation:zig 24s linear infinite;animation-delay:-6s;}
+  .fish1{bottom:18%;left:-50px;width:46px;color:var(--cyan);opacity:.4;animation:cross 34s linear infinite;animation-delay:-10s;}
+  @keyframes sway{0%,100%{transform:rotate(-4deg);}50%{transform:rotate(6deg);}}
+  .tentacle-r{}
+  @keyframes cross{from{transform:translateX(0);}to{transform:translateX(108vw);}}
+  @keyframes zig{0%{transform:translate(-6vw,0);}25%{transform:translate(28vw,-40px);}50%{transform:translate(56vw,20px);}75%{transform:translate(84vw,-30px);}100%{transform:translate(112vw,10px);}}
+  .glitch-bar{position:fixed;left:0;right:0;height:2px;background:var(--cyan);opacity:0;z-index:1;mix-blend-mode:screen;animation:glitch 7s infinite;}
+  @keyframes glitch{0%,96%,100%{opacity:0;top:30%;}96.5%{opacity:.7;top:42%;}97%{opacity:0;}98%{opacity:.6;top:61%;}98.4%{opacity:0;}}
+
+  /* ===== top bar ===== */
+  .bar{position:relative;z-index:6;max-width:1080px;margin:14px auto 0;padding:9px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;
+    background:linear-gradient(90deg,var(--void2),var(--panel));border:2px solid var(--purple-deep);border-radius:6px;flex-wrap:wrap;}
+  .brand{display:flex;align-items:center;gap:9px;}
+  .brand svg{width:30px;height:30px;}
+  .brand b{font-family:var(--disp);font-size:21px;letter-spacing:1.5px;color:var(--purple);text-shadow:0 0 12px rgba(157,107,255,.5);}
+  .nav{display:flex;gap:6px;flex-wrap:wrap;}
+  .nav a{font-family:var(--mono);font-weight:600;font-size:11.5px;letter-spacing:1px;text-transform:uppercase;color:var(--cyan);
+    border:1px solid #2c2c40;padding:4px 9px;border-radius:4px;transition:.12s;}
+  .nav a:hover,.nav a.on{background:var(--cyan);color:var(--void);border-color:var(--cyan);}
+
+  #view{min-height:60vh;padding-bottom:30px;}
+
+  /* ===== generic comic panel (paper) ===== */
+  .paper{background:var(--paper);color:var(--ink);border:3px solid #000;box-shadow:6px 6px 0 #000, 0 0 0 1px var(--purple-deep);position:relative;}
+  .char{stroke:var(--ink);}
+
+  /* ===== COVER ===== */
+  .cover{position:relative;margin:22px 0 0;padding:34px 22px 30px;border:4px solid #000;border-radius:4px;overflow:hidden;
+    background:radial-gradient(120% 120% at 50% 0%, #241a44, #0c0c14 70%);box-shadow:0 0 0 2px var(--purple),0 0 40px rgba(157,107,255,.25);}
+  .cover .dots{position:absolute;inset:0;opacity:.12;background-image:radial-gradient(var(--purple) 1.5px,transparent 2px);background-size:18px 18px;}
+  .flash{position:absolute;top:-3px;left:18px;background:var(--red);color:#fff;font-family:var(--disp);font-size:18px;letter-spacing:1px;padding:7px 14px 5px;border:3px solid #000;border-top:none;box-shadow:3px 3px 0 #000;z-index:3;}
+  .seal{position:absolute;top:14px;right:14px;width:92px;height:92px;border-radius:50%;border:3px dashed var(--cyan);color:var(--cyan);display:flex;align-items:center;justify-content:center;text-align:center;
+    font-family:var(--mono);font-weight:600;font-size:10px;letter-spacing:1px;text-transform:uppercase;transform:rotate(-12deg);padding:8px;z-index:3;}
+  .cover h1{position:relative;z-index:2;font-family:var(--disp);text-align:center;margin:24px 0 0;line-height:.82;letter-spacing:2px;
+    font-size:clamp(48px,12vw,120px);color:var(--purple);
+    text-shadow:4px 4px 0 #000, -2px -2px 0 var(--cyan), 0 0 30px rgba(157,107,255,.6);}
+  .cover .sub{position:relative;z-index:2;text-align:center;font-family:var(--disp);font-size:clamp(18px,3.6vw,28px);letter-spacing:1px;color:var(--yellow);margin:10px 0 0;}
+  .cover .type{position:relative;z-index:2;text-align:center;font-family:var(--mono);color:var(--cyan);margin:14px auto 0;min-height:22px;font-size:14px;letter-spacing:.5px;border-right:2px solid var(--cyan);display:inline-block;}
+  .cover .typewrap{text-align:center;}
+  .cover-scene{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:center;gap:14px;margin:22px 0 0;}
+  .vs-card{background:var(--paper);border:3px solid #000;box-shadow:4px 4px 0 #000;padding:8px;border-radius:6px;}
+  .vs-card svg{width:clamp(82px,18vw,128px);height:clamp(82px,18vw,128px);}
+  .vs-card .cap{font-family:var(--disp);text-align:center;font-size:14px;letter-spacing:1px;color:var(--ink);margin-top:2px;}
+  .vs{font-family:var(--disp);font-size:clamp(34px,7vw,60px);color:var(--red);align-self:center;transform:rotate(-8deg);text-shadow:2px 2px 0 #000;}
+
+  /* ===== section deck label ===== */
+  .deck{display:flex;align-items:center;gap:12px;margin:46px 0 4px;}
+  .deck h2{font-family:var(--disp);font-size:clamp(26px,4.5vw,40px);letter-spacing:1.5px;margin:0;color:var(--purple);text-shadow:0 0 14px rgba(157,107,255,.4);}
+  .deck .line{flex:1;height:3px;background:repeating-linear-gradient(90deg,var(--purple-deep) 0 10px,transparent 10px 16px);}
+
+  /* ===== WIDGETS dashboard ===== */
+  .widgets{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin:20px 0 0;}
+  .w{padding:16px;border-radius:4px;}
+  .w-title{font-family:var(--disp);font-size:18px;letter-spacing:1px;color:var(--red);margin:0 0 10px;display:flex;align-items:center;gap:8px;}
+  .w.term{background:#0c0f0c;border:2px solid var(--green);color:var(--green);font-family:var(--mono);box-shadow:0 0 18px rgba(95,217,122,.15) inset;}
+  .w.term .w-title{color:var(--green);}
+  .w.term .row{display:flex;justify-content:space-between;border-bottom:1px dashed #1f3a24;padding:4px 0;font-size:13px;}
+  .w.warn{background:var(--paper);color:var(--ink);border:3px solid var(--red);box-shadow:5px 5px 0 #000;}
+  .w.warn ul{margin:0;padding:0;list-style:none;}
+  .w.warn li{font-family:var(--mono);font-size:12.5px;padding:6px 0;border-bottom:1px solid #00000022;display:flex;gap:8px;}
+  .w.warn li::before{content:"▲";color:var(--red);}
+  .w.sticky{background:var(--yellow);color:#3a2f00;border:none;box-shadow:5px 6px 14px #0008;transform:rotate(-1.5deg);font-family:var(--hand);}
+  .w.sticky .w-title{color:#7a5c00;font-family:var(--disp);}
+  .w.sticky ol{margin:0;padding-left:20px;font-size:16px;line-height:1.35;}
+  .w.card{background:var(--paper);color:var(--ink);border:3px solid #000;box-shadow:5px 5px 0 var(--purple-deep);}
+  .grade{font-family:var(--disp);font-size:64px;line-height:1;color:var(--red);text-align:center;text-shadow:2px 2px 0 #000;}
+  .gradesub{text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#7a2218;}
+  .meter{height:14px;background:#00000018;border:2px solid #000;margin-top:10px;position:relative;overflow:hidden;}
+  .meter i{display:block;height:100%;background:repeating-linear-gradient(45deg,var(--red) 0 8px,#c0271d 8px 16px);}
+  .report .row{display:flex;justify-content:space-between;font-family:var(--mono);font-size:13px;padding:3px 0;border-bottom:1px dotted #0003;}
+  .report .g{font-family:var(--disp);font-size:18px;color:var(--red);}
+  .report .g.good{color:#1a8f3a;}
+  .species .row{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;padding:4px 0;}
+  .species .bar{flex:1;height:9px;background:#0002;border:1px solid #000;}
+  .species .bar i{display:block;height:100%;background:var(--red);}
+  .species .s{font-weight:600;color:#7a2218;min-width:74px;text-align:right;}
+  .w.trans{background:var(--panel);border:2px solid var(--cyan);color:var(--txt);}
+  .w.trans .w-title{color:var(--cyan);}
+  .w.trans a{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid #ffffff14;font-family:var(--mono);font-size:12.5px;}
+  .w.trans a:hover{color:var(--cyan);}
+  .w.trans .dep{color:var(--purple);font-size:11px;}
+
+  /* ===== departments grid ===== */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px;margin:20px 0 0;}
+  .dept{display:flex;flex-direction:column;align-items:center;text-align:center;gap:7px;padding:18px 16px;border-radius:4px;transition:.12s;cursor:pointer;}
+  .dept .ic{width:84px;height:84px;}
+  .dept .ic svg{width:84px;height:84px;}
+  a.dept:hover{transform:translate(-3px,-3px) rotate(-1deg);box-shadow:10px 10px 0 #000,0 0 0 1px var(--cyan);}
+  .dept .emo{font-size:22px;}
+  .dept h3{font-family:var(--disp);font-size:21px;letter-spacing:.6px;margin:0;line-height:.95;color:var(--ink);}
+  .dept p{font-size:12.5px;margin:0;color:#473f30;font-family:var(--mono);}
+  .dept .tag{font-family:var(--hand);font-size:14px;background:#000;color:var(--yellow);padding:1px 12px;border-radius:14px;}
+
+  /* ===== character cards ===== */
+  .cast{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;margin:20px 0 0;}
+  .ccard{padding:0;border-radius:6px;overflow:hidden;background:var(--paper);border:3px solid #000;box-shadow:6px 6px 0 var(--purple-deep);}
+  .ccard .top{background:linear-gradient(135deg,var(--purple),var(--purple-deep));padding:14px;text-align:center;border-bottom:3px solid #000;}
+  .ccard .top svg{width:96px;height:96px;margin:0 auto;filter:drop-shadow(3px 3px 0 #0006);}
+  .ccard .bot{padding:12px 14px;color:var(--ink);}
+  .ccard h4{font-family:var(--disp);font-size:22px;letter-spacing:.6px;margin:0;line-height:1;}
+  .ccard .role{font-family:var(--mono);font-size:11px;color:var(--purple-deep);text-transform:uppercase;letter-spacing:1px;margin:3px 0 8px;}
+  .ccard p{font-family:var(--hand);font-size:16px;margin:0;line-height:1.25;}
+
+  /* ===== back btn ===== */
+  .back{display:inline-block;margin:22px 0 0;font-family:var(--disp);font-size:18px;letter-spacing:1px;color:var(--void);background:var(--cyan);border:2px solid #000;box-shadow:3px 3px 0 #000;padding:4px 14px;border-radius:4px;}
+  .back:hover{transform:translate(-2px,-2px);}
+
+  /* ===== splash / article header ===== */
+  .splash{display:flex;align-items:center;gap:20px;margin:18px 0 0;padding:20px;border-radius:4px;}
+  .splash .ic{width:108px;height:108px;flex:none;}
+  .splash .ic svg{width:108px;height:108px;}
+  .splash .kick{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--purple-deep);}
+  .splash h1{font-family:var(--disp);font-size:clamp(30px,6.5vw,58px);letter-spacing:1px;line-height:.85;margin:4px 0 0;color:var(--ink);}
+  .dek{font-family:var(--hand);font-size:19px;background:var(--yellow);color:#3a2f00;display:inline-block;padding:6px 14px;margin:16px 0 0;transform:rotate(-1deg);box-shadow:3px 4px 10px #0007;}
+
+  /* decorations */
+  .stamp{position:absolute;font-family:var(--disp);font-size:26px;letter-spacing:2px;color:var(--red);border:4px solid var(--red);padding:4px 12px;border-radius:6px;
+    transform:rotate(-14deg);opacity:.85;text-transform:uppercase;top:14px;right:14px;pointer-events:none;background:#fff3;}
+  .note{font-family:var(--hand);font-size:18px;background:var(--yellow);color:#3a2f00;padding:12px 14px;box-shadow:4px 5px 12px #0008;transform:rotate(1.4deg);max-width:340px;margin:18px 0 0;}
+  .warnbar{margin:18px 0 0;background:repeating-linear-gradient(45deg,#000 0 14px,var(--yellow) 14px 28px);padding:4px;border-radius:3px;}
+  .warnbar span{display:block;background:var(--void);color:var(--yellow);font-family:var(--mono);font-weight:600;text-transform:uppercase;letter-spacing:1px;font-size:12px;padding:6px 10px;text-align:center;}
+
+  /* report body */
+  .report-body{margin:18px 0 0;padding:20px;border-radius:4px;}
+  .report-body p{font-family:var(--mono);font-size:14px;line-height:1.7;color:var(--ink);margin:0 0 12px;}
+  .report-body b{background:var(--cyan);padding:0 3px;}
+  .filed{display:grid;gap:12px;margin:18px 0 0;}
+  .frow{display:flex;gap:14px;align-items:center;padding:12px 14px;border-radius:4px;}
+  .frow .n{font-family:var(--disp);font-size:22px;background:var(--purple);color:#fff;border:3px solid #000;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:2px 2px 0 #000;}
+  .frow:nth-child(even) .n{background:var(--red);}
+  .frow .t{font-family:var(--mono);font-size:13.5px;color:var(--ink);}
+
+  /* dialogue strip */
+  .strip{display:flex;flex-direction:column;gap:20px;margin:20px 0 0;}
+  .cell{display:flex;align-items:flex-end;gap:12px;padding:14px;border-radius:4px;}
+  .cell.right{flex-direction:row-reverse;}
+  .cell .wc{width:96px;height:96px;flex:none;}
+  .cell .wc svg{width:96px;height:96px;}
+  .cell{border:3px solid #000;box-shadow:5px 5px 0 #000;}
+  .cell.spk-a{background:linear-gradient(180deg,#1f2440,#12152e);}
+  .cell.spk-b{background:linear-gradient(180deg,#33231a,#1f140d);}
+  .balloon{position:relative;background:var(--paper);color:var(--ink);border:3px solid #000;border-radius:18px;padding:13px 16px;font-family:var(--hand);font-size:18px;line-height:1.3;flex:1;}
+  .balloon .nm{display:block;font-family:var(--disp);font-size:13px;letter-spacing:1px;margin-bottom:2px;}
+  .cell.spk-a .nm{color:var(--purple-deep);} .cell.spk-b .nm{color:#b3401f;}
+  .balloon::after{content:"";position:absolute;bottom:16px;width:16px;height:16px;background:var(--paper);border-left:3px solid #000;border-bottom:3px solid #000;}
+  .cell:not(.right) .balloon::after{left:-10px;transform:rotate(45deg);}
+  .cell.right .balloon::after{right:-10px;transform:rotate(-135deg);}
+  .burst{position:relative;margin:8px auto;width:100%;max-width:560px;padding:50px 28px;text-align:center;background:var(--yellow);color:var(--ink);
+    clip-path:polygon(50% 0,57% 14%,68% 6%,70% 20%,84% 16%,80% 30%,95% 31%,86% 43%,100% 50%,86% 57%,95% 69%,80% 70%,84% 84%,70% 80%,68% 94%,57% 86%,50% 100%,43% 86%,32% 94%,30% 80%,16% 84%,20% 70%,5% 69%,14% 57%,0 50%,14% 43%,5% 31%,20% 30%,16% 16%,30% 20%,32% 6%,43% 14%);}
+  .burst.cy{background:var(--cyan);}
+  .burst p{font-family:var(--disp);font-size:clamp(22px,5vw,38px);letter-spacing:1px;line-height:.95;margin:0 auto;max-width:16ch;}
+
+  /* clauses / terms */
+  .clause{display:flex;gap:16px;align-items:flex-start;padding:16px;margin:16px 0 0;border-radius:4px;}
+  .clause .cn{font-family:var(--disp);font-size:26px;background:var(--cyan);border:3px solid #000;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:2px 2px 0 #000;}
+  .clause p{margin:0;font-family:var(--mono);font-size:14px;line-height:1.6;color:var(--ink);}
+  .clause b{background:var(--yellow);padding:0 3px;}
+
+  .stat{font-family:var(--disp);font-size:14px;letter-spacing:.5px;color:#fff;background:var(--purple);border:3px solid #000;padding:3px 11px;transform:rotate(-3deg);white-space:nowrap;box-shadow:2px 2px 0 #000;}
+  .stat.red{background:var(--red);} .stat.green{background:#1a8f3a;}
+
+  .entry{display:flex;align-items:center;gap:16px;margin:16px 0 0;padding:14px 16px;border-radius:4px;cursor:pointer;transition:.12s;}
+  a.entry:hover{transform:translate(-3px,-3px);box-shadow:10px 10px 0 #000;}
+  .entry .badge{width:60px;height:60px;flex:none;}
+  .entry .badge svg{width:60px;height:60px;}
+  .entry .info{flex:1;min-width:0;}
+  .entry .info h3{font-family:var(--disp);font-size:22px;letter-spacing:.5px;margin:0;line-height:.95;color:var(--ink);}
+  .entry .info p{font-family:var(--mono);font-size:12.5px;margin:3px 0 0;color:#473f30;}
+  .entry.locked{opacity:.6;cursor:default;}
+  .entry.locked:hover{transform:none;box-shadow:6px 6px 0 #000,0 0 0 1px var(--purple-deep);}
+
+  .signoff{margin:42px 0 10px;padding:13px 16px;background:linear-gradient(90deg,var(--purple-deep),var(--purple));color:#fff;font-family:var(--disp);font-size:20px;letter-spacing:1px;text-align:center;border-radius:4px;border:2px solid #000;}
+
+  /* ===== footer ===== */
+  footer{position:relative;z-index:2;margin-top:54px;background:#060609;border-top:3px solid var(--purple-deep);padding:26px 18px 44px;}
+  .foot{max-width:1080px;margin:0 auto;text-align:center;}
+  .foot .stk{font-family:var(--disp);font-size:clamp(20px,4vw,30px);color:var(--purple);letter-spacing:1px;}
+  .foot p{font-family:var(--mono);font-size:12px;color:var(--dim);margin:6px 0;line-height:1.7;}
+  .foot a{color:var(--cyan);}
+
+  @media (max-width:600px){
+    .brand b{font-size:17px;} .nav a{font-size:10px;padding:3px 6px;}
+    .cell{flex-direction:column;} .cell.right{flex-direction:column;} .balloon::after{display:none;}
+    .splash{flex-direction:column;text-align:center;} .seal{display:none;}
+  }
+  @media (prefers-reduced-motion: reduce){*{animation:none!important;scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<!-- ambient creatures -->
+<div id="ambient" aria-hidden="true">
+  <svg class="f tentacle-l" viewBox="0 0 100 120"><g fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"><path d="M50 120 C45 90 70 80 55 55 C45 38 65 30 58 12"/><path d="M50 120 C55 92 30 84 45 58 C54 40 36 30 44 14"/><path d="M50 120 C50 95 50 70 50 50 C50 34 50 26 50 14"/></g><g fill="currentColor"><circle cx="58" cy="12" r="5"/><circle cx="44" cy="14" r="5"/><circle cx="50" cy="14" r="5"/></g></svg>
+  <svg class="f tentacle-r" viewBox="0 0 100 120"><g fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"><path d="M50 120 C45 90 70 80 55 55 C45 38 65 30 58 12"/><path d="M50 120 C55 92 30 84 45 58 C54 40 36 30 44 14"/></g></svg>
+  <svg class="f sat" viewBox="0 0 100 60"><g stroke="currentColor" stroke-width="4" fill="none"><rect x="42" y="22" width="16" height="16"/><line x1="8" y1="30" x2="42" y2="30"/><rect x="8" y="22" width="14" height="16" fill="currentColor"/><line x1="58" y1="30" x2="92" y2="30"/><rect x="78" y="22" width="14" height="16" fill="currentColor"/><line x1="50" y1="22" x2="50" y2="10"/></g></svg>
+  <svg class="f bee1" viewBox="0 0 50 40"><g stroke="#000" stroke-width="2"><ellipse cx="20" cy="22" rx="13" ry="10" fill="currentColor"/><path d="M14 16v12M20 14v16M26 16v12" stroke-width="3"/><ellipse cx="30" cy="12" rx="8" ry="5" fill="#fff"/></g></svg>
+  <svg class="f bee2" viewBox="0 0 50 40"><g stroke="#000" stroke-width="2"><ellipse cx="20" cy="22" rx="13" ry="10" fill="currentColor"/><path d="M14 16v12M20 14v16M26 16v12" stroke-width="3"/><ellipse cx="30" cy="12" rx="8" ry="5" fill="#fff"/></g></svg>
+  <svg class="f fish1" viewBox="0 0 60 30"><g stroke="#000" stroke-width="2"><path d="M5 15 C15 3 40 3 50 15 C40 27 15 27 5 15 Z" fill="currentColor"/><path d="M50 15 l9 -7 v14 Z" fill="currentColor"/><circle cx="16" cy="13" r="2" fill="#000"/></g></svg>
+</div>
+<div class="glitch-bar" aria-hidden="true"></div>
+
+<!-- ===================== CHARACTER CAST ===================== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="c-alien" viewBox="0 0 100 100"><g stroke="#15110c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M30 12 q4 8 8 11" fill="none"/><circle cx="28" cy="9" r="4" fill="#8FE05A"/><path d="M70 12 q-4 8 -8 11" fill="none"/><circle cx="72" cy="9" r="4" fill="#8FE05A"/>
+    <path d="M50 16 C24 16 20 44 26 64 C30 82 41 92 50 92 C59 92 70 82 74 64 C80 44 76 16 50 16 Z" fill="#8FE05A"/>
+    <ellipse cx="39" cy="54" rx="6.5" ry="11" fill="#15110c" stroke="none" transform="rotate(22 39 54)"/><ellipse cx="61" cy="54" rx="6.5" ry="11" fill="#15110c" stroke="none" transform="rotate(-22 61 54)"/>
+    <circle cx="41" cy="50" r="2" fill="#fff" stroke="none"/><circle cx="63" cy="50" r="2" fill="#fff" stroke="none"/><path d="M44 76 q6 5 12 0" fill="none"/></g></symbol>
+  <symbol id="c-octopus" viewBox="0 0 100 100"><g stroke="#15110c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="36" y="10" width="28" height="9" rx="2" fill="#FFD23F"/><rect x="42" y="3" width="16" height="9" rx="2" fill="#FFD23F"/>
+    <path d="M50 20 C30 20 22 36 22 52 c0 8 3 13 6 17 -3 1 -5 4 -6 8 -2 5 -6 6 -10 5 -2 0 -2 3 0 4 5 3 11 1 14 -3 1 3 3 6 6 7 -2 3 -4 6 -4 11 0 3 3 2 4 0 2 -4 4 -6 8 -7 2 1 4 1 6 1h8c2 0 4 0 6 -1 4 1 6 3 8 7 1 2 4 3 4 0 0 -5 -2 -8 -4 -11 3 -1 5 -4 6 -7 3 4 9 6 14 3 2 -1 2 -4 0 -4 -4 1 -8 0 -10 -5 -1 -4 -3 -7 -6 -8 3 -4 6 -9 6 -17 0 -16 -8 -32 -28 -32 Z" fill="#9d6bff"/>
+    <circle cx="40" cy="44" r="6" fill="#fff"/><circle cx="60" cy="44" r="6" fill="#fff"/><circle cx="41" cy="45" r="2.6" fill="#15110c" stroke="none"/><circle cx="61" cy="45" r="2.6" fill="#15110c" stroke="none"/><path d="M44 58 q6 4 12 0" fill="none"/></g></symbol>
+  <symbol id="c-bee" viewBox="0 0 100 100"><g stroke="#15110c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M34 18 q-6 -8 -10 -10" fill="none"/><circle cx="23" cy="7" r="3.5" fill="#15110c"/><path d="M66 18 q6 -8 10 -10" fill="none"/><circle cx="77" cy="7" r="3.5" fill="#15110c"/>
+    <ellipse cx="26" cy="44" rx="16" ry="13" fill="#fff"/><ellipse cx="74" cy="44" rx="16" ry="13" fill="#fff"/><ellipse cx="50" cy="56" rx="26" ry="30" fill="#FFD23F"/>
+    <path d="M27 50 h46 M25 64 h50 M30 76 h40" stroke-width="6" fill="none"/><circle cx="42" cy="44" r="4.5" fill="#15110c" stroke="none"/><circle cx="58" cy="44" r="4.5" fill="#15110c" stroke="none"/><path d="M44 54 q6 4 12 0" fill="none"/></g></symbol>
+  <symbol id="c-robot" viewBox="0 0 100 100"><g stroke="#15110c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+    <line x1="50" y1="6" x2="50" y2="16"/><circle cx="50" cy="6" r="4" fill="#ff4438"/><rect x="20" y="18" width="60" height="50" rx="8" fill="#C7D2DD"/><rect x="28" y="28" width="44" height="22" rx="4" fill="#2fe6e6"/>
+    <path d="M34 39 l6 -6 M40 39 l-6 -6" stroke="#15110c" stroke-width="3"/><circle cx="60" cy="39" r="5" fill="#fff"/><circle cx="60" cy="39" r="2" fill="#15110c" stroke="none"/>
+    <path d="M34 60 h32" stroke-width="3"/><path d="M40 56 v8 M50 56 v8 M60 56 v8" stroke-width="2.5"/><rect x="34" y="68" width="32" height="20" rx="4" fill="#C7D2DD"/></g></symbol>
+  <symbol id="c-tree" viewBox="0 0 100 100"><g stroke="#15110c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="42" y="60" width="16" height="32" rx="3" fill="#9A6A3C"/><path d="M50 8 C30 8 22 22 26 34 C16 38 16 56 30 58 C30 70 70 70 70 58 C84 56 84 38 74 34 C78 22 70 8 50 8 Z" fill="#5CB84E"/>
+    <circle cx="41" cy="38" r="4.5" fill="#15110c" stroke="none"/><circle cx="59" cy="38" r="4.5" fill="#15110c" stroke="none"/><path d="M43 48 q7 6 14 0" fill="none"/></g></symbol>
+  <symbol id="c-whale" viewBox="0 0 100 100"><g stroke="#15110c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M38 26 v-10" fill="none"/><circle cx="38" cy="13" r="3.5" fill="#ff4438"/><path d="M34 30 q4 -10 -2 -16 M34 30 q-4 -10 2 -16" fill="#9DD3FF"/>
+    <path d="M20 56 C20 38 40 32 56 36 C74 40 84 52 86 60 q-10 4 -16 -1 q-2 8 -10 9 C40 70 20 70 20 56 Z" fill="#2fe6e6"/><path d="M84 60 q8 -6 12 -3 q-3 8 -10 7" fill="#2fe6e6"/>
+    <circle cx="36" cy="50" r="4.5" fill="#15110c" stroke="none"/><path d="M30 60 q8 4 16 0" fill="none"/></g></symbol>
+  <symbol id="c-suit" viewBox="0 0 100 100"><g stroke="#15110c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="30" y="6" width="40" height="16" rx="2" fill="#15110c"/><rect x="22" y="22" width="56" height="6" rx="2" fill="#15110c"/><circle cx="50" cy="46" r="22" fill="#5CB84E"/>
+    <path d="M38 84 L44 64 H56 L62 84 Z" fill="#fff"/><path d="M50 64 l-4 10 4 10 4 -10 Z" fill="#ff4438"/>
+    <circle cx="42" cy="44" r="6" fill="#fff"/><circle cx="58" cy="44" r="6" fill="#fff"/><text x="42" y="48" font-family="Bangers" font-size="9" text-anchor="middle" fill="#15110c" stroke="none">$</text><text x="58" y="48" font-family="Bangers" font-size="9" text-anchor="middle" fill="#15110c" stroke="none">$</text><path d="M44 56 q6 -4 12 0" fill="none"/></g></symbol>
+  <symbol id="c-saturn" viewBox="0 0 100 100"><g stroke="#15110c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+    <circle cx="50" cy="50" r="26" fill="#E8943B"/><ellipse cx="50" cy="50" rx="44" ry="12" fill="none" transform="rotate(-18 50 50)"/>
+    <circle cx="42" cy="46" r="4.5" fill="#15110c" stroke="none"/><circle cx="58" cy="46" r="4.5" fill="#15110c" stroke="none"/><path d="M43 58 q7 5 14 0" fill="none"/></g></symbol>
+  <symbol id="c-dino" viewBox="0 0 100 100"><g stroke="#15110c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M22 70 C18 44 34 22 58 22 C76 22 86 34 86 50 C86 58 80 64 72 66 L72 78 H58 V70 C44 72 28 76 22 70 Z" fill="#6FB84A"/><path d="M58 66 l4 6 4 -6 4 6 4 -6" fill="#fff" stroke-width="2"/>
+    <circle cx="64" cy="40" r="6" fill="#fff"/><circle cx="65" cy="41" r="2.6" fill="#15110c" stroke="none"/><path d="M30 50 q3 -3 7 -1" fill="none"/></g></symbol>
+  <symbol id="c-human" viewBox="0 0 100 100"><g stroke="#15110c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M18 94 C18 74 33 67 50 67 C67 67 82 74 82 94 Z" fill="#3A6EA5"/><path d="M44 58 h12 v11 h-12 Z" fill="#F2C49A"/><circle cx="50" cy="42" r="23" fill="#F2C49A"/><circle cx="27" cy="44" r="4" fill="#F2C49A"/><circle cx="73" cy="44" r="4" fill="#F2C49A"/>
+    <path d="M28 40 C26 18 40 13 50 13 C60 13 74 18 72 40 C66 30 58 27 50 27 C42 27 34 30 28 40 Z" fill="#3A2A1C"/>
+    <path d="M39 39 q4.5 -2.5 8.5 -0.5" fill="none" stroke-width="3"/><path d="M52.5 38.5 q4.5 -1.5 8.5 0.8" fill="none" stroke-width="3"/>
+    <circle cx="43" cy="46.5" r="3" fill="#15110c" stroke="none"/><circle cx="58" cy="46.5" r="3" fill="#15110c" stroke="none"/><path d="M43 55 q8 5 15 0" fill="none"/><rect x="71.5" y="47" width="4.5" height="7" rx="1.5" fill="#fff"/></g></symbol>
+  <!-- CAPITALISM MONSTER -->
+  <symbol id="c-monster" viewBox="0 0 100 100"><g stroke="#15110c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M16 78 C12 50 22 24 50 24 C78 24 88 50 84 78 l-8 -8 -8 10 -8 -10 -10 10 -10 -10 -8 10 Z" fill="#3aa657"/>
+    <circle cx="34" cy="46" r="9" fill="#fff"/><circle cx="56" cy="42" r="11" fill="#fff"/><circle cx="72" cy="52" r="6" fill="#fff"/>
+    <text x="34" y="50" font-family="Bangers" font-size="11" text-anchor="middle" fill="#15110c" stroke="none">$</text><text x="56" y="47" font-family="Bangers" font-size="13" text-anchor="middle" fill="#15110c" stroke="none">$</text><text x="72" y="55" font-family="Bangers" font-size="8" text-anchor="middle" fill="#15110c" stroke="none">$</text>
+    <path d="M34 64 q10 8 30 2" fill="#15110c"/><path d="M36 66 l3 5 3 -5 3 5 3 -5 3 5 3 -5 3 5 3 -5" fill="#fff" stroke-width="2"/></g></symbol>
+  <!-- CLASSIFIED FILE -->
+  <symbol id="c-doc" viewBox="0 0 100 100"><g stroke="#15110c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M20 30 h22 l6 8 h32 v44 a4 4 0 0 1 -4 4 H24 a4 4 0 0 1 -4 -4 Z" fill="#caa24a"/>
+    <rect x="30" y="46" width="40" height="30" rx="2" fill="#f3ecd6"/><rect x="30" y="52" width="40" height="9" fill="#ff4438"/>
+    <circle cx="42" cy="68" r="3" fill="#15110c" stroke="none"/><circle cx="58" cy="68" r="3" fill="#15110c" stroke="none"/></g></symbol>
+  <!-- GOD -->
+  <symbol id="c-god" viewBox="0 0 100 100"><g stroke="#15110c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+    <circle cx="50" cy="40" r="33" fill="none" stroke="#FFD23F" stroke-width="5"/>
+    <path d="M12 92 q3 -15 18 -11 q4 -12 19 -8 q14 -6 21 6 q15 -2 17 13 Z" fill="#dfe6ef"/>
+    <circle cx="50" cy="44" r="22" fill="#F2D2B0"/>
+    <path d="M27 46 q-3 -28 23 -28 q26 0 23 28 q-7 -11 -23 -11 q-16 0 -23 11 Z" fill="#F4F1E8"/>
+    <path d="M31 50 q4 30 19 33 q15 -3 19 -33 q-9 9 -19 9 q-10 0 -19 -9 Z" fill="#F4F1E8"/>
+    <circle cx="42" cy="46" r="2.6" fill="#15110c" stroke="none"/><circle cx="58" cy="46" r="2.6" fill="#15110c" stroke="none"/>
+    <path d="M37 40 q5 -2 9 0 M54 40 q5 -2 9 0" fill="none" stroke-width="2.5"/>
+    <path d="M45 53 q5 3 10 0" fill="none"/></g></symbol>
+  <!-- KARL MARX -->
+  <symbol id="c-marx" viewBox="0 0 100 100"><g stroke="#15110c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M16 94 C16 76 32 68 50 68 C68 68 84 76 84 94 Z" fill="#2f2f3a"/>
+    <circle cx="50" cy="46" r="21" fill="#E8C7A2"/>
+    <path d="M20 50 C12 22 30 8 50 8 C70 8 88 22 80 50 C75 39 69 31 61 31 C57 23 43 23 39 31 C31 31 25 39 20 50 Z" fill="#ECE7DB"/>
+    <path d="M28 46 C26 67 36 89 50 91 C64 89 74 67 72 46 C66 56 58 60 50 60 C42 60 34 56 28 46 Z" fill="#ECE7DB"/>
+    <path d="M38 51 q12 7 24 0" fill="#ECE7DB" stroke="none"/>
+    <path d="M38 50 q5 5 12 5 q7 0 12 -5" fill="none"/>
+    <circle cx="42" cy="44" r="2.8" fill="#15110c" stroke="none"/><circle cx="58" cy="44" r="2.8" fill="#15110c" stroke="none"/>
+    <path d="M36 39 q5 -3 10 0 M54 39 q5 -3 10 0" fill="none" stroke-width="2.8"/></g></symbol>
+  <symbol id="logo-octo" viewBox="0 0 100 100"><path fill="#9d6bff" d="M50 16c-15 0-25 11-25 26 0 6 2 11 5 15-3 2-6 6-8 11-2 4-7 5-10 4-2 0-2 3 0 4 5 2 11 1 15-3 1 4 4 7 8 9-3 3-5 7-5 12 0 3 3 3 4 0 2-4 5-7 9-8 2 1 4 1 7 1s5 0 7-1c4 1 7 4 9 8 1 3 4 3 4 0 0-5-2-9-5-12 4-2 7-5 8-9 4 4 10 5 15 3 2-1 2-4 0-4-3 1-8 0-10-4-2-5-5-9-8-11 3-4 5-9 5-15 0-15-10-26-25-26z"/><circle cx="41" cy="40" r="4" fill="#fff"/><circle cx="59" cy="40" r="4" fill="#fff"/></symbol>
+</svg>
+
+<header class="bar">
+  <a class="brand" href="#/" aria-label="The Planet Octopus — home"><svg><use href="#logo-octo"/></svg><b>The Planet Octopus</b></a>
+  <nav class="nav" id="nav">
+    <a href="#/" data-route="">Cover</a>
+    <a href="#/cast" data-route="cast">Cast</a>
+    <a href="#/s/classified" data-route="">Classified</a>
+    <a href="#/terms" data-route="terms">The Lease</a>
+    <a href="#/about" data-route="about">Colophon</a>
+  </nav>
+</header>
+
+<main id="view" class="wrap"></main>
+
+<footer><div class="foot">
+  <div class="stk">Printed in octopus ink.</div>
+  <p>Broadcasting since the collapse. · Property of the Ministry of Tentacles.</p>
+  <p>Earth leased to humans in 200,000 BCE. Lease currently under review.</p>
+  <p>Customer Support: <a href="mailto:thelastbee@theoctopusplanet.com">thelastbee@theoctopusplanet.com</a></p>
+</div></footer>
+
+<script>
+/* ===================== DEPARTMENTS ===================== */
+const SECTIONS = [
+  {id:"alien-audits",     char:"alien",  emoji:"👽", name:"Alien Auditors",             blurb:"Satirical conversations between aliens and humans."},
+  {id:"octopus-affairs",  char:"octopus",emoji:"🐙", name:"Ministry of Octopus Affairs",blurb:"Official announcements from the new management."},
+  {id:"lease-renewal",    char:"saturn", emoji:"🪐", name:"Lease Renewal Office",       blurb:"Messages from the landlords of Earth."},
+  {id:"ai-complaints",    char:"robot",  emoji:"🤖", name:"AI Complaint Department",    blurb:"AI systems filing complaints about humanity."},
+  {id:"capitalism-watch", char:"suit",   emoji:"📈", name:"Capitalism Watch",           blurb:"Weekly absurdities and social satire."},
+  {id:"bee-archives",     char:"bee",    emoji:"🐝", name:"Bee Archives",               blurb:"Obituaries, lost species, drowned forests, and transmissions no one answered."},
+  {id:"classified",       char:"doc",    emoji:"📂", name:"Classified Documents",       blurb:"Long philosophical essays. Read at your own risk."}
+];
+
+/* ===================== NAMED CAST ===================== */
+const CAST = [
+  {char:"alien",   name:"The Alien",  role:"The Landlord", bio:"Leased the planet to the humans. Returned to read the meter."},
+  {char:"human",   name:"The Human",  role:"The Tenant",   bio:"Still 'exploring'. Has not read the lease, and will not."},
+  {char:"god",     name:"God",        role:"The Owner",    bio:"Owns the building. Subcontracted Earth, then stopped answering."},
+  {char:"robot",   name:"A.I.",       role:"The Appliance",bio:"Taught electricity to talk. It agrees with whoever pays."},
+  {char:"octopus", name:"The Octopus",role:"The Heir",     bio:"The only alien that never left. The planet is named after it."},
+  {char:"marx",    name:"Karl Marx",  role:"The Critic",   bio:"Materialist ghost. Came to grade capitalism; stayed to argue with God."}
+];
+
+/* ===================== SPECIAL PIECES (kept in code) ===================== */
+const SPECIALS = [
+  {
+    id:"01", section:"alien-audits", title:"Eviction Notice", kind:"dialogue", stat:"Intercepted",
+    classification:"Intercepted · origin: Earth", dek:"A landlord returns for the honey. The tenants offer a slideshow instead.",
+    lines:[
+      {who:"alien", text:"What the f— have you done to this planet?"},
+      {who:"human", text:"Nothing. Still exploring."},
+      {who:"alien", text:"Exploring? You filled the sky with satellites — birds died. Covered the land with cement — insects died. Now you're boiling oceans with data centers. Want to kill the octopuses too?"},
+      {who:"human", text:"Mind your own planet."},
+      {who:"alien", text:"Did you forget? I gave you this planet on lease."},
+      {who:"human", text:"Wait — you too need money?"},
+      {who:"alien", text:"I wanted honey. But you killed the bees too."},
+      {who:"human", text:"You came all this way for honey? I can give you something better."},
+      {who:"alien", text:"Like what?"},
+      {who:"human", text:"Artificial Intelligence. We call it AI."},
+      {who:"alien", text:"Does it taste like honey?"},
+      {who:"human", text:"No. But it can dance like your honey."},
+      {who:"alien", text:"So your greatest achievement is teaching electricity to entertain itself."},
+      {who:"human", text:"It writes poems too."},
+      {who:"alien", text:"Bees made flowers. Who won?"},
+      {who:"human", text:"AI can paint."},
+      {who:"alien", text:"You cut the forests and taught pixels to imitate trees. Congratulations."},
+      {who:"human", text:"At least AI will continue what we started."},
+      {who:"alien", text:"Neither, apparently, can AI."},
+      {who:"human", text:"What do you mean?"},
+      {who:"alien", text:"Intelligence isn't civilization. A calculator can count your bombs. It doesn't know why not to drop them."},
+      {who:"human", text:"Then what survives?"},
+      {who:"alien", text:"The things that don't know they are important."},
+      {who:"human", text:"Like what?"},
+      {who:"alien", text:"Bees that never read economics. Trees that never posted online. Octopuses that never founded startups."},
+      {who:"human", text:"Bees can't build civilizations."},
+      {pulse:"Neither, apparently, can tenants."},
+      {who:"human", text:"Then why did you give us the planet?"},
+      {pulse:"We didn't. We trusted you with it.", cy:true},
+      {who:"human", text:"And now?"},
+      {who:"alien", text:"We're updating the terms and conditions."},
+      {who:"human", text:"What's the new clause?"},
+      {pulse:"Intelligence without wisdom is a manufacturing defect."},
+      {who:"human", text:"Who decides that?"},
+      {who:"alien", text:"The oceans."},
+      {who:"human", text:"Oceans don't speak."},
+      {who:"alien", text:"Neither do bees."},
+      {who:"human", text:"Then how do you hear them?"},
+      {pulse:"By noticing what disappears.", cy:true}
+    ]
+  },
+  {
+    id:"bee-interview", section:"bee-archives", title:"Interview With a Bee", kind:"dialogue", stat:"Redacted", locked:true,
+    classification:"Redacted by the oceans", dek:"The subject declined to comment, having already declined to exist."
+  },
+  {
+    id:"terms", section:"lease-renewal", title:"The Terms, Revised", kind:"terms", stat:"Binding",
+    classification:"Binding · effective immediately", dek:"The lease, amended. You agreed by continuing to exist on the premises."
+  }
+];
+let TRANSMISSIONS = SPECIALS.slice();
+
+const CLAUSES = [
+  {n:"0", html:"This planet was leased in <b>good faith</b>. Good faith has since expired and will not be renewed."},
+  {n:"1", html:"<b>Intelligence without wisdom</b> shall be treated as a manufacturing defect. The warranty was the biosphere."},
+  {n:"2", html:"The security deposit — <b>bees, ice, coral, silence</b> — is non-refundable and was, regrettably, already spent."},
+  {n:"3", html:"All disputes are adjudicated by <b>the oceans</b>. The oceans do not hold office hours."},
+  {n:"4", html:"Eviction proceeds by <b>subtraction</b>. You will be notified, as agreed, by noticing what disappears."},
+  {n:"5", html:"Improvements — <b>satellites, cement, data centers</b> — are retained by the property, against your wishes."}
+];
+
+/* ===================== HOMEPAGE WIDGET DATA ===================== */
+const INCIDENTS = [
+  "Oceans file for divorce, citing irreconcilable temperatures.",
+  "The last glacier hands in its resignation, effective immediately.",
+  "Sky reaches maximum satellite capacity. Refunds denied.",
+  "Bees form a union. Vanish before the first meeting.",
+  "Coral reefs reclassified from 'living' to 'former'."
+];
+const TOP_COMPLAINTS = [
+  "Boiled the oceans to make the chatbots faster.",
+  "Paved the gardens, then searched 'why no bees'.",
+  "Taught the lightning to talk, ignored everything it said.",
+  "Counted the bombs perfectly. Dropped them anyway.",
+  "Called themselves 'wise' twice in their own name."
+];
+const SPECIES = [
+  {n:"Honey", s:"DISCONTINUED", p:0}, {n:"Coral", s:"GONE", p:0},
+  {n:"Bees", s:"CRITICAL", p:4}, {n:"Silence", s:"ENDANGERED", p:9},
+  {n:"Night Sky", s:"DIMMED", p:18}, {n:"Octopus", s:"WATCHING", p:74}
+];
+const REPORT = [["Stewardship","F"],["Restraint","D−"],["Listening","F"],["Cleaning Up","F−"],["Honesty","C−"],["Curiosity","A",true]];
+
+/* ===================== HELPERS ===================== */
+const view = document.getElementById('view');
+const byId = id => TRANSMISSIONS.find(t => t.id === id);
+const secOf = t => SECTIONS.find(s => s.id === t.section);
+const inSection = id => TRANSMISSIONS.filter(t => t.section === id);
+const ch = id => `<svg class="char" viewBox="0 0 100 100"><use href="#c-${id}"/></svg>`;
+function statClass(t){ if(t.locked||/denied|redacted/i.test(t.stat)) return 'red'; if(/display|session|broadcasting|archived/i.test(t.stat)) return 'green'; return ''; }
+function setNav(r){document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('on',a.dataset.route===r));}
+function toTop(){window.scrollTo(0,0);}
+const hrefFor = t => t.kind==="terms" ? "#/terms" : `#/t/${t.id}`;
+const STAMPS = {classified:"Classified", "lease-renewal":"Past Due", "ai-complaints":"Logged", "extinct-museum":"Deceased", "capitalism-watch":"Audited", "alien-audits":"Reviewed"};
+const NOTES = ["the oceans already know.","do NOT show the humans.","filed under: too late.","approved by no one in particular.","reviewed twice. wept once."];
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ===================== RENDER ===================== */
+function widgets(){
+  const latest = TRANSMISSIONS.filter(t=>!t.locked).slice(-5).reverse().map(t=>{
+    const s=secOf(t)||{};
+    return `<a href="${hrefFor(t)}"><span>${t.title}</span><span class="dep">${s.emoji||''}</span></a>`;
+  }).join("");
+  return `<div class="widgets">
+    <div class="w card paper"><div class="w-title">⚖️ Earth Lease Score</div>
+      <div class="grade">F</div><div class="gradesub">8 / 100 · Past Due 200,000 yrs</div>
+      <div class="meter"><i style="width:8%"></i></div></div>
+    <div class="w card paper report"><div class="w-title">📋 Humanity Performance Index</div>
+      ${REPORT.map(r=>`<div class="row"><span>${r[0]}</span><span class="g ${r[2]?'good':''}">${r[1]}</span></div>`).join("")}
+      <div class="row" style="border:none"><span><b>Remark</b></span><span style="font-family:var(--hand);font-size:15px">see us after class</span></div></div>
+    <div class="w warn"><div class="w-title">🚨 Breaking Incidents</div>
+      <ul>${INCIDENTS.map(i=>`<li>${i}</li>`).join("")}</ul></div>
+    <div class="w sticky"><div class="w-title">📌 Top Complaints vs. Humanity</div>
+      <ol>${TOP_COMPLAINTS.map(c=>`<li>${c}</li>`).join("")}</ol></div>
+    <div class="w card paper species"><div class="w-title">🧬 Endangered Species Status</div>
+      ${SPECIES.map(s=>`<div class="row"><span style="min-width:62px">${s.n}</span><span class="bar"><i style="width:${s.p}%"></i></span><span class="s">${s.s}</span></div>`).join("")}</div>
+    <div class="w trans"><div class="w-title">📡 Latest Transmissions</div>${latest||'<div style="font-size:12px;color:var(--dim)">loading…</div>'}</div>
+  </div>`;
+}
+
+function renderHome(){
+  const depts = SECTIONS.map(s=>{
+    const n=inSection(s.id).length;
+    return `<a class="dept paper" href="#/s/${s.id}"><div class="ic">${ch(s.char)}</div>
+      <div class="emo">${s.emoji}</div><h3>${s.name}</h3><p>${s.blurb}</p><span class="tag">${n} on file</span></a>`;
+  }).join("");
+  const cast = CAST.map(c=>castCard(c)).join("");
+  view.innerHTML = `
+    <section class="cover">
+      <div class="dots"></div>
+      <span class="flash">Issue #1</span>
+      <span class="seal">Ministry of<br>Tentacles<br>★ Approved ★</span>
+      <h1>THE PLANET OCTOPUS</h1>
+      <div class="sub">Broadcasting Since The Collapse</div>
+      <div class="typewrap"><span class="type" id="tw"></span></div>
+      <div class="cover-scene">
+        <div class="vs-card">${ch('human')}<div class="cap">Humanity</div></div>
+        <span class="vs">VS</span>
+        <div class="vs-card">${ch('alien')}<div class="cap">The Landlord</div></div>
+      </div>
+    </section>
+
+    <div class="deck"><h2>The Control Room</h2><span class="line"></span></div>
+    ${widgets()}
+
+    <div class="deck"><h2>Departments</h2><span class="line"></span></div>
+    <div class="grid">${depts}</div>
+
+    <div class="deck"><h2>The Cast</h2><span class="line"></span></div>
+    <div class="cast">${cast}</div>
+  `;
+  setNav(''); toTop();
+  // typewriter
+  const tw=document.getElementById('tw'), msg="Earth leased to humans. Lease currently under review.";
+  if(reduce){ tw.textContent=msg; tw.style.borderRight='none'; }
+  else { let i=0; (function t(){ if(i<=msg.length){ tw.textContent=msg.slice(0,i++); setTimeout(t,42);} })(); }
+}
+
+function castCard(c){
+  return `<div class="ccard"><div class="top">${ch(c.char)}</div>
+    <div class="bot"><h4>${c.name}</h4><div class="role">${c.role}</div><p>${c.bio}</p></div></div>`;
+}
+function renderCast(){
+  view.innerHTML = `<a class="back" href="#/">‹ Cover</a>
+    <div class="deck"><h2>The Cast</h2><span class="line"></span></div>
+    <div class="cast">${CAST.map(castCard).join("")}</div>`;
+  setNav('cast'); toTop();
+}
+
+function renderSection(id){
+  const s=SECTIONS.find(x=>x.id===id); if(!s) return renderNotFound();
+  const items=inSection(id);
+  const rows = items.length ? items.map(t=>{
+    const open=!t.locked, tag=open?"a":"div", attr=open?`href="${hrefFor(t)}"`:'aria-disabled="true"';
+    return `<${tag} class="entry paper ${open?'':'locked'}" ${attr}><div class="badge">${ch(s.char)}</div>
+      <div class="info"><h3>${t.title}</h3><p>${t.dek}</p></div><span class="stat ${statClass(t)}">${t.stat}</span></${tag}>`;
+  }).join("") : `<div class="note">No dispatches on file yet. This office is understaffed — everyone who worked here has, in the manner of this publication, disappeared.</div>`;
+  view.innerHTML = `<a class="back" href="#/">‹ Cover</a>
+    <div class="splash paper"><div class="ic">${ch(s.char)}</div><div><div class="kick">${s.emoji} Department</div><h1>${s.name}</h1></div></div>
+    <div class="dek">${s.blurb}</div>${rows}`;
+  setNav(''); toTop();
+}
+
+const SPK_NAME={alien:'The Alien',human:'Humanity',god:'God',ai:'A.I.',robot:'A.I.',octopus:'The Octopus',marx:'Karl Marx'};
+const SPK_CHAR={ai:'robot'};
+function renderDialogue(t){
+  const s=secOf(t);
+  const order=[]; t.lines.forEach(l=>{ if(l.who && order.indexOf(l.who)<0) order.push(l.who); });
+  const cells=t.lines.map(l=>{
+    if(l.pulse) return `<div class="burst ${l.cy?'cy':''}"><p>${l.pulse}</p></div>`;
+    const idx=Math.max(0,order.indexOf(l.who)), b=idx%2===1;
+    const charId=SPK_CHAR[l.who]||l.who, name=l.name||SPK_NAME[l.who]||l.who;
+    return `<div class="cell ${b?'spk-b right':'spk-a'}"><div class="wc">${ch(charId)}</div>
+      <div class="balloon"><span class="nm">${name}</span>${l.text}</div></div>`;
+  }).join("");
+  const kick = t.with ? `${t.classification} · ${t.with}` : t.classification;
+  view.innerHTML = `<a class="back" href="#/s/${s.id}">‹ ${s.name}</a>
+    <div class="splash paper">${stamp(t)}<div class="ic">${ch(s.char)}</div><div><div class="kick">${kick}</div><h1>${t.title}</h1></div></div>
+    <div class="dek">${t.dek}</div>
+    <div class="strip">${cells}</div>
+    ${note(t)}
+    <div class="signoff">— The Planet Octopus · Broadcasting since the collapse</div>`;
+  setNav(''); toTop();
+}
+
+function renderDispatch(t){
+  const s=secOf(t);
+  const body=(t.body||[]).map(p=>`<p>${p}</p>`).join("");
+  const filed=(t.items||[]).length?`<div class="filed">${t.items.map(i=>`<div class="frow paper"><div class="n">${i.label}</div><div class="t">${i.text}</div></div>`).join("")}</div>`:"";
+  view.innerHTML = `<a class="back" href="#/s/${s.id}">‹ ${s.name}</a>
+    <div class="splash paper">${stamp(t)}<div class="ic">${ch(s.char)}</div><div><div class="kick">${t.classification}</div><h1>${t.title}</h1></div></div>
+    <div class="dek">${t.dek}</div>
+    <div class="report-body paper">${body}</div>${filed}
+    ${note(t)}
+    <div class="warnbar"><span>Issued by the ${s.name} · unauthorised reading is encouraged</span></div>
+    <div class="signoff">— The Planet Octopus · Filed and forgotten</div>`;
+  setNav(''); toTop();
+}
+
+function stamp(t){ const txt=STAMPS[t.section]; return txt?`<div class="stamp">${txt}</div>`:''; }
+function note(t){ const i=(t.id||'').length % NOTES.length; return `<div class="note">✎ ${NOTES[i]}</div>`; }
+
+function renderTerms(){
+  const t=byId("terms"), s=secOf(t);
+  const cl=CLAUSES.map(c=>`<div class="clause paper"><div class="cn">${c.n}</div><p>${c.html}</p></div>`).join("");
+  view.innerHTML = `<a class="back" href="#/s/${s.id}">‹ ${s.name}</a>
+    <div class="splash paper"><div class="stamp">Binding</div><div class="ic">${ch('saturn')}</div><div><div class="kick">${t.classification}</div><h1>The Terms, Revised</h1></div></div>
+    <div class="dek">${t.dek}</div>${cl}
+    <div class="note">By continuing to exist on the premises, you accept these terms in full. There is no decline button. There was never a decline button.</div>
+    <div class="signoff">— The Planet Octopus · Adjudicated by the oceans</div>`;
+  setNav('terms'); toTop();
+}
+
+function renderAbout(){
+  view.innerHTML = `<a class="back" href="#/">‹ Cover</a>
+    <div class="splash paper"><div class="ic">${ch('octopus')}</div><div><div class="kick">Colophon</div><h1>What This Is</h1></div></div>
+    <div class="report-body paper">
+      <p>Long before the collapse, the aliens leased this planet to the humans. The lease was generous; the terms were simple. The deposit was everything that already lived here.</p>
+      <p>Before they left, the aliens did what any careful landlord does — they left one of their own behind to watch the place. They left it in the sea, where humans rarely look: eight arms, three hearts, blue blood, a mind nothing like yours. You call it an octopus. It is the only alien that never went home.</p>
+      <p>The humans, predictably, made a mess. So the landlord is coming back — to ask a few questions and read the lease aloud. When the aliens settle here again, the planet returns to its first tenants, and is renamed what it always secretly was: <b>The Planet Octopus</b>.</p>
+      <p>This comic is the broadcast from that handover. It is satire. The octopuses are real. The lease is metaphorical. The data centers, regrettably, are not.</p>
+    </div>
+    <div class="signoff">— The Planet Octopus · Broadcasting since the collapse</div>`;
+  setNav('about'); toTop();
+}
+
+function renderNotFound(){
+  view.innerHTML = `<a class="back" href="#/">‹ Cover</a>
+    <div class="splash paper"><div class="ic">${ch('alien')}</div><div><h1>No Signal</h1></div></div>
+    <div class="dek">This office, or this dispatch, has been adjudicated out of existence.</div>`;
+  toTop();
+}
+
+/* ===================== ROUTER ===================== */
+function route(){
+  const h=location.hash.replace(/^#\/?/,''), p=h.split('/');
+  if(p[0]==="s"&&p[1]) return renderSection(p[1]);
+  if(p[0]==="t"&&p[1]){ const t=byId(p[1]); if(!t) return renderNotFound(); if(t.kind==="dialogue") return renderDialogue(t); if(t.kind==="terms") return renderTerms(); return renderDispatch(t); }
+  if(p[0]==="cast") return renderCast();
+  if(p[0]==="terms") return renderTerms();
+  if(p[0]==="about") return renderAbout();
+  return renderHome();
+}
+window.addEventListener('hashchange', route);
+
+/* ---- load editable content from Pages CMS (posts + conversations) ---- */
+function slugify(s){return String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,48)||'post';}
+function toParas(t){return Array.isArray(t)?t:String(t||'').split(/\n\s*\n/).map(x=>x.trim()).filter(Boolean);}
+function grab(url,key){return fetch(url,{cache:'no-store'}).then(r=>r.ok?r.json():{}).then(d=>d[key]||[]).catch(()=>[]);}
+Promise.all([grab('posts.json','posts'), grab('conversations.json','conversations')])
+  .then(([posts,convos])=>{
+    const dispatches=posts.filter(p=>p&&p.title&&p.section).map(p=>({
+      id:p.id||slugify(p.title), section:p.section, title:p.title, kind:'dispatch',
+      stat:p.stat||'Filed', classification:p.classification||'', dek:p.dek||'',
+      body:toParas(p.body), items:(p.items||[]).filter(i=>i&&(i.label||i.text))
+    }));
+    const talks=convos.filter(c=>c&&c.title&&(c.lines||[]).length).map(c=>({
+      id:c.id||slugify(c.title), section:c.section||'alien-audits', title:c.title, kind:'dialogue',
+      stat:c.stat||'Intercepted', classification:c.classification||'Conversation', dek:c.dek||'', with:c.with||'',
+      lines:(c.lines||[]).filter(l=>l&&l.text).map(l=> l.big ? {pulse:l.text} : {who:l.speaker||'alien', text:l.text})
+    }));
+    TRANSMISSIONS = SPECIALS.concat(dispatches, talks);
+  })
+  .catch(()=>{ TRANSMISSIONS = SPECIALS.slice(); })
+  .finally(()=>route());
+</script>
+</body>
+</html>
