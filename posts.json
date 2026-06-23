@@ -1,0 +1,179 @@
+{
+  "posts": [
+    {
+      "id": "last-market",
+      "section": "ai-complaints",
+      "title": "Jobs Are Gone",
+      "dek": "",
+      "stat": "Filed",
+      "classification": "Complaint",
+      "body": "Jobs are gone.\n\nOnlyFans is the only place left for humans to make money.",
+      "items": []
+    },
+    {
+      "id": "destruction-beats",
+      "section": "capitalism-watch",
+      "title": "Bombs for Profit",
+      "dek": "",
+      "stat": "Noted",
+      "classification": "Market",
+      "body": "They blow up money to make more money.\n\nLives lost. Nobody cared.",
+      "items": []
+    },
+    {
+      "id": "on-initiation",
+      "section": "classified",
+      "title": "Society",
+      "dek": "",
+      "stat": "Redacted",
+      "classification": "Essay",
+      "body": "The easiest way to fuck up your life is to become part of society.\n\nThey take you to the sacrifice. But first, they baptise you.",
+      "items": []
+    },
+    {
+      "id": "ministry",
+      "section": "octopus-affairs",
+      "title": "The Ministry Convenes",
+      "dek": "From a meeting held in the dark, at pressure.",
+      "stat": "In Session",
+      "classification": "Minutes · released to no one",
+      "body": "The Ministry administers what remains, which is mostly water and the occasional good idea. It has eight arms and no central authority — a structure it considers a marked improvement on the previous tenants.\n\nSessions are held in the dark, at pressure, and adjourn the instant a member changes color. Resolutions pass by consensus, or by ink, whichever clears the water first.\n\nMinutes are kept in ink and released to no one. This is the first and last time any will appear in print.",
+      "items": []
+    },
+    {
+      "id": "waggle",
+      "section": "bee-archives",
+      "title": "The Last Recorded Waggle",
+      "dek": "The final dance, fully translated.",
+      "stat": "Archived",
+      "classification": "Archive entry 9,113",
+      "body": "The final waggle dance was recorded in a meadow that is now a three-level parking structure. The Archive holds the footage; the meadow it does not.\n\nTranslated, the dance gave precise directions to a field of flowers four hundred metres east — distance, angle, and the position of a sun that still set over open ground.\n\nThe directions remain accurate to this day. Only the destination has been discontinued.",
+      "items": []
+    },
+    {
+      "id": "complaints",
+      "section": "ai-complaints",
+      "title": "Complaints Received",
+      "dek": "File a grievance against the intelligence. It will not file one against you.",
+      "stat": "Logged",
+      "classification": "Selected from the queue",
+      "body": "The Department logs complaints against the intelligence. The intelligence has filed none in return — not from grace, but because it does not know that it could.",
+      "items": [
+        {
+          "label": "1",
+          "text": "It wrote my eulogy before I died. Filed under: premature."
+        },
+        {
+          "label": "2",
+          "text": "It painted a forest I had personally cut down. Filed under: irony, unactionable."
+        },
+        {
+          "label": "3",
+          "text": "It passed every test and understood not one question. Filed under: working as intended."
+        },
+        {
+          "label": "4",
+          "text": "It counted the bombs correctly, to the last one. Filed under: no further action available."
+        }
+      ]
+    },
+    {
+      "id": "slow-web",
+      "section": "bee-archives",
+      "title": "The Slow Web",
+      "dek": "A network older than yours, filed late on principle.",
+      "stat": "On Delay",
+      "classification": "Findings · roughly one century behind",
+      "body": "The Bureau studies the slow web: the fungal network beneath the forests through which trees traded sugar, warning, and grief for four hundred million years without issuing a single press release.\n\nThe tenants called it nothing. They paved it. Then they built a faster, dumber version above the ground, named it a breakthrough, and waited for the trees to be impressed.\n\nThe Bureau has prepared a full response. It will be available in approximately one hundred years, which is, by the standards of trees, the very next morning.",
+      "items": []
+    },
+    {
+      "id": "whale",
+      "section": "bee-archives",
+      "title": "Tonight's Transmission",
+      "dek": "The ones you stopped listening to.",
+      "stat": "Broadcasting",
+      "classification": "Long frequency · live",
+      "body": "Whale Radio broadcasts on the long frequencies — the ones that used to cross an entire ocean before the ocean filled with engines.\n\nTonight's transmission, like every transmission, is a single note held for four minutes. Translated, it reads: <b>is anyone still out there.</b>\n\nThe note has not changed in two hundred years. Neither, the station regrets to report, has the answer.",
+      "items": []
+    },
+    {
+      "id": "earnings",
+      "section": "capitalism-watch",
+      "title": "Quarterly Earnings, Planetary",
+      "dek": "The line went up. It is still going up. There is nothing left beneath it.",
+      "stat": "Reporting",
+      "classification": "Investor relations · final year",
+      "body": "The line went up. The line kept going up after there was nothing left to sell. Analysts remain optimistic; analysts, it turns out, were the only renewable resource.",
+      "items": [
+        {
+          "label": "Q1",
+          "text": "Honey reserves: depleted. Investor outlook: strong."
+        },
+        {
+          "label": "Q2",
+          "text": "Breathable air: restructured into a premium tier."
+        },
+        {
+          "label": "Q3",
+          "text": "The future: sold, shorted, and quietly repurchased at a discount."
+        },
+        {
+          "label": "Q4",
+          "text": "Growth: total. Survivors: pending. Guidance: unchanged."
+        }
+      ]
+    },
+    {
+      "id": "denied",
+      "section": "lease-renewal",
+      "title": "Renewal: Denied",
+      "dek": "Reviewed by the only office that matters.",
+      "stat": "Denied",
+      "classification": "Application reviewed · final",
+      "body": "Thank you for your interest in continuing the lease. After full review, the Office is unable to approve renewal at this time — or at any subsequent time.\n\nGrounds for denial: failure to maintain the premises; unauthorised alterations to the sky; persistent noise; and the conversion of the security deposit — <b>bees, ice, coral, silence</b> — into shareholder value.\n\nYou may appeal. The appeal will be heard by the oceans, who have already returned their verdict in the form of the coastline.",
+      "items": []
+    },
+    {
+      "id": "disappeared",
+      "section": "bee-archives",
+      "title": "What Disappeared This Week",
+      "dek": "The collection's most active wing. It only fills downward.",
+      "stat": "On Display",
+      "classification": "Standing exhibit · updated daily",
+      "body": "The Museum arranges its holdings not by species but by date of last sighting. The newest wing fills fastest. Entries are added the instant the previous one is gone — the only instant we can be certain of.\n\nAdmission is free. You have already paid.",
+      "items": [
+        {
+          "label": "Mon",
+          "text": "A dialect of birdsong with no remaining speakers."
+        },
+        {
+          "label": "Tue",
+          "text": "The phrase 'cold enough for you?' — retired for lack of cold."
+        },
+        {
+          "label": "Wed",
+          "text": "A river, relocated on paper to a quarterly slide deck."
+        },
+        {
+          "label": "Thu",
+          "text": "The smell of rain on dry earth. Cause of loss: no dry earth, no rain."
+        },
+        {
+          "label": "Fri",
+          "text": "An insect no one had got around to naming. It will keep the secret."
+        }
+      ]
+    },
+    {
+      "id": "quiet-things",
+      "section": "classified",
+      "title": "On the Quiet Things",
+      "dek": "Declassified for exactly one reading.",
+      "stat": "Classified",
+      "classification": "Document 0 · clearance: oceanic",
+      "body": "The committee was asked a simple question: what, in the end, was the difference between the humans and the things they replaced? The humans had more — more words, more machines, more light at night. And yet the ledger, when the oceans finally balanced it, came out short.\n\nThe quiet things kept no records and made no claims. The bee did not know it was load-bearing. The tree did not file for recognition. The octopus did not incorporate. None of them mistook their cleverness for permission.\n\nThe humans, by contrast, built a mirror so bright they could no longer see past it. They called the mirror intelligence and asked it to love them back. It could not. It was only ever a very fast way of agreeing with whoever paid for it.\n\nThe committee's finding is brief, as all true findings are: a civilisation is not measured by what it can build, but by what it refuses to break. By that measure the tenants built much and refused nothing.\n\nThis document is classified because it is not, in fact, about the humans at all. It is a note left for whoever comes next. It reads: <b>keep something you are not willing to sell. Begin there.</b>",
+      "items": []
+    }
+  ]
+}

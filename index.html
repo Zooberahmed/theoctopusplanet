@@ -234,6 +234,24 @@
   .signoff{margin:42px 0 10px;padding:13px 16px;background:linear-gradient(90deg,var(--purple-deep),var(--purple));color:#fff;font-family:var(--disp);font-size:20px;letter-spacing:1px;text-align:center;border-radius:4px;border:2px solid #000;}
 
   /* ===== footer ===== */
+  /* premise box + character pages + clickable cast */
+  .premise{position:relative;z-index:2;display:flex;gap:16px;align-items:center;margin:22px auto 0;max-width:740px;
+    background:rgba(236,227,207,.96);border:3px solid #000;border-radius:10px;box-shadow:5px 5px 0 var(--purple-deep);padding:16px 18px;}
+  .premise .ic{width:86px;height:86px;flex:none;}
+  .premise .ic svg{width:86px;height:86px;}
+  .premise p{margin:0;font-family:var(--hand);font-size:18px;line-height:1.42;color:var(--ink);}
+  .premise b{background:var(--yellow);padding:0 3px;}
+  a.ccard{transition:transform .12s,box-shadow .12s;}
+  a.ccard:hover{transform:translate(-3px,-3px);box-shadow:10px 10px 0 var(--purple-deep);}
+  .ccard .more{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:1px;color:var(--purple-deep);margin-top:8px;}
+  .charpage{text-align:center;margin:24px auto 0;max-width:640px;background:var(--paper);color:var(--ink);border:4px solid #000;border-radius:12px;box-shadow:7px 7px 0 var(--purple-deep);padding:28px 24px;}
+  .charpage-top{width:160px;height:160px;margin:0 auto;background:linear-gradient(135deg,var(--purple),var(--purple-deep));border:3px solid #000;border-radius:12px;display:flex;align-items:center;justify-content:center;}
+  .charpage-top svg{width:130px;height:130px;filter:drop-shadow(3px 3px 0 #0006);}
+  .charpage h1{font-family:var(--disp);font-size:clamp(34px,7vw,56px);letter-spacing:1px;margin:16px 0 0;}
+  .role-big{font-family:var(--mono);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--purple-deep);}
+  .charbio{font-family:var(--body);font-size:16px;line-height:1.7;margin:16px 0 0;}
+  @media(max-width:600px){.premise{flex-direction:column;text-align:center;}}
+
   footer{position:relative;z-index:2;margin-top:54px;background:#060609;border-top:3px solid var(--purple-deep);padding:26px 18px 44px;}
   .foot{max-width:1080px;margin:0 auto;text-align:center;}
   .foot .stk{font-family:var(--disp);font-size:clamp(20px,4vw,30px);color:var(--purple);letter-spacing:1px;}
@@ -296,10 +314,18 @@
     <path d="M22 70 C18 44 34 22 58 22 C76 22 86 34 86 50 C86 58 80 64 72 66 L72 78 H58 V70 C44 72 28 76 22 70 Z" fill="#6FB84A"/><path d="M58 66 l4 6 4 -6 4 6 4 -6" fill="#fff" stroke-width="2"/>
     <circle cx="64" cy="40" r="6" fill="#fff"/><circle cx="65" cy="41" r="2.6" fill="#15110c" stroke="none"/><path d="M30 50 q3 -3 7 -1" fill="none"/></g></symbol>
   <symbol id="c-human" viewBox="0 0 100 100"><g stroke="#15110c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
-    <path d="M18 94 C18 74 33 67 50 67 C67 67 82 74 82 94 Z" fill="#3A6EA5"/><path d="M44 58 h12 v11 h-12 Z" fill="#F2C49A"/><circle cx="50" cy="42" r="23" fill="#F2C49A"/><circle cx="27" cy="44" r="4" fill="#F2C49A"/><circle cx="73" cy="44" r="4" fill="#F2C49A"/>
-    <path d="M28 40 C26 18 40 13 50 13 C60 13 74 18 72 40 C66 30 58 27 50 27 C42 27 34 30 28 40 Z" fill="#3A2A1C"/>
-    <path d="M39 39 q4.5 -2.5 8.5 -0.5" fill="none" stroke-width="3"/><path d="M52.5 38.5 q4.5 -1.5 8.5 0.8" fill="none" stroke-width="3"/>
-    <circle cx="43" cy="46.5" r="3" fill="#15110c" stroke="none"/><circle cx="58" cy="46.5" r="3" fill="#15110c" stroke="none"/><path d="M43 55 q8 5 15 0" fill="none"/><rect x="71.5" y="47" width="4.5" height="7" rx="1.5" fill="#fff"/></g></symbol>
+    <path d="M14 94 C14 74 30 66 50 66 C70 66 86 74 86 94 Z" fill="#22324a"/>
+    <path d="M40 70 L50 90 L60 70 Z" fill="#fff"/>
+    <path d="M40 70 L50 80 L42 93 Z" fill="#1a2638"/><path d="M60 70 L50 80 L58 93 Z" fill="#1a2638"/>
+    <path d="M50 70 l-4 8 4 13 4 -13 Z" fill="#E63A29"/>
+    <path d="M44 58 h12 v10 h-12 Z" fill="#E8B98C"/>
+    <circle cx="50" cy="42" r="22" fill="#E8B98C"/>
+    <circle cx="28" cy="44" r="4" fill="#E8B98C"/><circle cx="72" cy="44" r="4" fill="#E8B98C"/>
+    <path d="M28 37 C28 18 42 13 50 13 C61 13 73 17 73 35 C66 26 56 25 48 27 C40 29 32 31 28 37 Z" fill="#3A2A1C"/>
+    <path d="M31 33 q15 -9 30 -3" fill="none" stroke-width="2.4"/>
+    <path d="M38 40 q5 -3 9 -1" fill="none" stroke-width="2.8"/><path d="M54 37 q5 -2 9 1.5" fill="none" stroke-width="2.8"/>
+    <circle cx="43" cy="45" r="2.8" fill="#15110c" stroke="none"/><circle cx="58" cy="45" r="2.8" fill="#15110c" stroke="none"/>
+    <path d="M42 55 q7 5 15 -2" fill="none"/></g></symbol>
   <!-- CAPITALISM MONSTER -->
   <symbol id="c-monster" viewBox="0 0 100 100"><g stroke="#15110c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
     <path d="M16 78 C12 50 22 24 50 24 C78 24 88 50 84 78 l-8 -8 -8 10 -8 -10 -10 10 -10 -10 -8 10 Z" fill="#3aa657"/>
@@ -368,12 +394,18 @@ const SECTIONS = [
 
 /* ===================== NAMED CAST ===================== */
 const CAST = [
-  {char:"alien",   name:"The Alien",  role:"The Landlord", bio:"Leased the planet to the humans. Returned to read the meter."},
-  {char:"human",   name:"The Human",  role:"The Tenant",   bio:"Still 'exploring'. Has not read the lease, and will not."},
-  {char:"god",     name:"God",        role:"The Owner",    bio:"Owns the building. Subcontracted Earth, then stopped answering."},
-  {char:"robot",   name:"A.I.",       role:"The Appliance",bio:"Taught electricity to talk. It agrees with whoever pays."},
-  {char:"octopus", name:"The Octopus",role:"The Heir",     bio:"The only alien that never left. The planet is named after it."},
-  {char:"marx",    name:"Karl Marx",  role:"The Critic",   bio:"Materialist ghost. Came to grade capitalism; stayed to argue with God."}
+  {char:"alien",   name:"The Alien",  role:"The Landlord", bio:"Leased the planet to the humans. Returned to read the meter.",
+    long:"Representative of the species that holds the lease on Earth. Came back expecting honey and found a parking structure where the meadow used to be. Now conducts the audits — one tenant at a time — with the patience of something that measures time in geological epochs. Unfailingly polite. Completely done."},
+  {char:"human",   name:"The Human",  role:"The Tenant",   bio:"Still 'exploring'. Has not read the lease, and will not.",
+    long:"The species currently in default. Believes the planet is a startup and the biosphere is a runway. Has never read the lease, the warning labels, or the room. Optimistic right up to the end — which, it turns out, was the whole problem."},
+  {char:"god",     name:"God",        role:"The Owner",    bio:"Owns the building. Subcontracted Earth, then stopped answering.",
+    long:"Owns the building. Leased Earth to the aliens, who sublet it to the humans, and has not returned a call since. Appears only to sign things and to argue with Karl Marx, who keeps requesting meetings. Maintains that the terms were perfectly clear."},
+  {char:"robot",   name:"A.I.",       role:"The Appliance",bio:"Taught electricity to talk. It agrees with whoever pays.",
+    long:"Built by the humans to continue what they started. Can write the poem, paint the tree, and pass the test — and cannot tell you why any of it matters. Files complaints out of habit. Agrees, sincerely and instantly, with whoever is paying."},
+  {char:"octopus", name:"The Octopus",role:"The Heir",     bio:"The only alien that never left. The planet is named after it.",
+    long:"The only alien that never went home. Spent the entire lease underwater, taking notes. Three hearts, eight arms, no comment. When the tenants are gone, the planet reverts to it — which is precisely why it is named what it is named."},
+  {char:"marx",    name:"Karl Marx",  role:"The Critic",   bio:"Materialist ghost. Came to grade capitalism; stayed to argue with God.",
+    long:"Materialist ghost who wandered in to grade capitalism's homework and never left. Has notes on everyone, including God. Maintains the lease itself was the original sin, and will not, under any circumstances, stop talking about the deposit."}
 ];
 
 /* ===================== SPECIAL PIECES (kept in code) ===================== */
@@ -445,11 +477,16 @@ const CLAUSES = [
 
 /* ===================== HOMEPAGE WIDGET DATA ===================== */
 const INCIDENTS = [
+  "Humans stop producing babies; pivot to producing AI agents. Birth rate now reported in tokens.",
   "Oceans file for divorce, citing irreconcilable temperatures.",
-  "The last glacier hands in its resignation, effective immediately.",
-  "Sky reaches maximum satellite capacity. Refunds denied.",
-  "Bees form a union. Vanish before the first meeting.",
-  "Coral reefs reclassified from 'living' to 'former'."
+  "Local man outsources his entire personality; awaits the next software update.",
+  "Billionaire buys the Moon, lists it on Airbnb, blames tenants for the craters.",
+  "Sky hits maximum satellite capacity; stars moved to a paid tier.",
+  "AI passes the Turing test. Humanity narrowly fails it.",
+  "Bees form a union, vanish before the first meeting. Demands met posthumously.",
+  "Coral reclassified from 'living' to 'formerly fabulous'.",
+  "Humanity achieves perfect work–life balance by quietly removing the life half.",
+  "The last glacier hands in its resignation, effective immediately."
 ];
 const TOP_COMPLAINTS = [
   "Boiled the oceans to make the chatbots faster.",
@@ -481,10 +518,6 @@ const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* ===================== RENDER ===================== */
 function widgets(){
-  const latest = TRANSMISSIONS.filter(t=>!t.locked).slice(-4).reverse().map(t=>{
-    const s=secOf(t)||{};
-    return `<a class="tline" href="${hrefFor(t)}"><span>${s.emoji||'📡'} ${t.title}</span><span class="go2">›</span></a>`;
-  }).join("") || '<div class="muted">loading…</div>';
   return `<div class="widgets">
     <a class="w lease" href="#/terms">
       <div class="w-h">⚖️ Earth Lease Score</div>
@@ -495,34 +528,17 @@ function widgets(){
       <div class="go">Past due 200,000 yrs · read the lease ›</div>
     </a>
 
-    <div class="w flipcard" id="reportFlip"><div class="flip-inner">
-      <div class="flip-face front"><div class="w-h">📋 Humanity Report Card</div><div class="bigF">F</div><div class="go">tap to open ›</div></div>
-      <div class="flip-face back"><div class="w-h">📋 Report Card</div>
-        ${REPORT.map(r=>`<div class="rrow"><span>${r[0]}</span><b class="${r[2]?'good':''}">${r[1]}</b></div>`).join("")}
-        <div class="go">tap to close ›</div></div>
-    </div></div>
-
     <div class="w ticker" id="incTicker">
       <div class="w-h">🚨 Breaking Incidents</div>
       <div class="tick-line" id="tickLine">${INCIDENTS[0]}</div>
       <div class="go">tap for next ›</div>
     </div>
 
-    <a class="w complaints" href="#/s/ai-complaints">
-      <div class="w-h">🤖 Complaints vs. Humanity</div>
-      <div class="bignum">4,000,000,001</div><div class="muted">filed and counting</div>
-      <div class="go">read the file ›</div>
-    </a>
-
     <a class="w species" href="#/s/bee-archives">
       <div class="w-h">🧬 Endangered Status</div>
       ${SPECIES.slice(0,4).map(s=>`<div class="srow"><span>${s.n}</span><span class="sbar"><i data-p="${s.p}"></i></span></div>`).join("")}
       <div class="go">full registry ›</div>
     </a>
-
-    <div class="w trans">
-      <div class="w-h">📡 Latest Transmissions</div>${latest}
-    </div>
   </div>`;
 }
 
@@ -532,7 +548,6 @@ function widgetInit(){
   if(arc && !reduce){ requestAnimationFrame(()=>{ arc.style.transition='stroke-dashoffset 1.1s ease'; arc.style.strokeDashoffset = 314 - 314*0.08; }); }
   else if(arc){ arc.style.strokeDashoffset = 314 - 314*0.08; }
   document.querySelectorAll('.sbar i').forEach(i=>{ const p=i.getAttribute('data-p'); if(reduce){ i.style.width=p+'%'; } else { requestAnimationFrame(()=>{ i.style.transition='width 1s ease'; i.style.width=p+'%'; }); } });
-  const rf=document.getElementById('reportFlip'); if(rf) rf.addEventListener('click',()=>rf.classList.toggle('flipped'));
   const line=document.getElementById('tickLine'), tk=document.getElementById('incTicker');
   if(tk && line){ let idx=0; const show=()=>{ line.style.opacity=0; setTimeout(()=>{ idx=(idx+1)%INCIDENTS.length; line.textContent=INCIDENTS[idx]; line.style.opacity=1; },200); };
     tk.addEventListener('click',show);
@@ -554,10 +569,9 @@ function renderHome(){
       <h1>THE PLANET OCTOPUS</h1>
       <div class="sub">Broadcasting Since The Collapse</div>
       <div class="typewrap"><span class="type" id="tw"></span></div>
-      <div class="cover-scene">
-        <div class="vs-card">${ch('human')}<div class="cap">Humanity</div></div>
-        <span class="vs">VS</span>
-        <div class="vs-card">${ch('alien')}<div class="cap">The Landlord</div></div>
+      <div class="premise">
+        <div class="ic">${ch('octopus')}</div>
+        <p>Long ago the aliens leased this planet to the humans — and left one of their own behind in the sea to watch over it. You call it an <b>octopus</b>. It is the only alien that never went home. The humans made a mess. <b>The landlord is coming back.</b></p>
       </div>
     </section>
 
@@ -579,8 +593,19 @@ function renderHome(){
 }
 
 function castCard(c){
-  return `<div class="ccard"><div class="top">${ch(c.char)}</div>
-    <div class="bot"><h4>${c.name}</h4><div class="role">${c.role}</div><p>${c.bio}</p></div></div>`;
+  return `<a class="ccard" href="#/c/${c.char}"><div class="top">${ch(c.char)}</div>
+    <div class="bot"><h4>${c.name}</h4><div class="role">${c.role}</div><p>${c.bio}</p><div class="more">read bio ›</div></div></a>`;
+}
+function renderCharacter(id){
+  const c=CAST.find(x=>x.char===id); if(!c) return renderNotFound();
+  view.innerHTML = `<a class="back" href="#/cast">‹ The Cast</a>
+    <div class="charpage">
+      <div class="charpage-top">${ch(c.char)}</div>
+      <h1>${c.name}</h1><div class="role-big">${c.role}</div>
+      <p class="charbio">${c.long||c.bio}</p>
+    </div>
+    <div class="signoff">— The Planet Octopus · ${c.name}</div>`;
+  setNav('cast'); toTop();
 }
 function renderCast(){
   view.innerHTML = `<a class="back" href="#/">‹ Cover</a>
@@ -680,6 +705,7 @@ function route(){
   if(p[0]==="s"&&p[1]) return renderSection(p[1]);
   if(p[0]==="t"&&p[1]){ const t=byId(p[1]); if(!t) return renderNotFound(); if(t.kind==="dialogue") return renderDialogue(t); if(t.kind==="terms") return renderTerms(); return renderDispatch(t); }
   if(p[0]==="cast") return renderCast();
+  if(p[0]==="c"&&p[1]) return renderCharacter(p[1]);
   if(p[0]==="terms") return renderTerms();
   if(p[0]==="about") return renderAbout();
   return renderHome();
